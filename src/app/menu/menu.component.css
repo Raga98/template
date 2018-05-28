@@ -94,12 +94,14 @@ a:active {
         border-top: 2px solid #eee;
     }
 
-
     .nav-links {
-        /*order: 3;
-        grid-column: span 2;
-        font-size: 18px;*/
-        display: none;
+        font-size: 25px;
+        padding: 6px;
+        display: grid;
+        grid-template-columns: repeat(1, max-content);
+        grid-template-rows: repeat(6, max-content);
+        text-align: center;
+        order: 3;
     }
     .nav > .nav-links > a {
         display: block;
@@ -114,4 +116,6 @@ a:active {
         background-color: #EFA747
     }
 }
-
+.none {
+    display: none;
+}
