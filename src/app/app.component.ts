@@ -10,7 +10,16 @@ export class AppComponent {
   title = 'app';
   
   show: boolean = true;
+  noShow: boolean = false;
 
+  toggle() {
+    this.show = !this.show
+    if ( this.show ) {
+      this.noShow = false
+    } else {
+      this.noShow = true
+    }
+  }
 }
 
 

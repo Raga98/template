@@ -4,12 +4,11 @@
   </div>
   <div class="left"></div>
   <div class="content">
-      <button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
+      <button (click)="toggle()">{{show ? 'hide' : 'show'}}</button>
       show = {{show}}
       <br>
-      <div *ngIf="show; else elseBlock">Text to show</div>
-      <ng-template #elseBlock>Alternate text while primary text is hidden</ng-template>
-  </div>
+      <div [ngClass]="{'prueba1': show, 'prueba2': noShow}">Text to show</div>
+    </div>
   <div class="right"></div>
   <div class="footer"></div>
 </div>

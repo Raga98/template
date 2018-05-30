@@ -15,6 +15,7 @@ export class MenuComponent implements OnInit {
   classMenu: string = 'oculto';
   //Cada vez que es accionado toggle el valor de la variable visible es cambiado por su negativo
   toggle() {
+    //"show = !show"
     this.classMenu = 'display'
     this.classMenu = 'oculto'
   }
