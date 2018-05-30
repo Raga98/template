@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -7,24 +7,19 @@ import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-//Declaración de la variable visible, se le define como boolean y se le asigna un valor = true
-visible: boolean = true;
-//Acontinuación se definen open y close dentro de Output 
-@Output() open: EventEmitter<any> = new EventEmitter();
-@Output() close: EventEmitter<any> = new EventEmitter();
+  //public hidden = "oculto";
+  //public display = "display";
 
-toggle() {
-  this.visible = !this.visible;
-  if (this.visible) {
-    this.open.emit(null);
-  } else {
-    this.close.emit(null);
+  //Declaración de la variable visible, se le define como boolean y se le asigna un valor = true
+  visible: boolean = false;
+  classMenu: string = 'oculto';
+  //Cada vez que es accionado toggle el valor de la variable visible es cambiado por su negativo
+  toggle() {
+    this.classMenu = 'display'
+    this.classMenu = 'oculto'
   }
-}
 
   constructor() { }
-
   ngOnInit() {
   }
-
 }
