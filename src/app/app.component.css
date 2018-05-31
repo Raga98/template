@@ -27,19 +27,7 @@
 }
 /*Medium size view*/
 @media (min-width: 820px) and (max-width: 980px) {
-    .container {
-        grid-template-rows: auto 1fr 100px;
-    }
-    .content {
-        grid-column: span 9;
-    }
-    .left {
-        display: none
-    }
-    .right {
-        grid-column: span 3;
-        display: initial;
-    }
+
 }
 /*Big size view*/
 @media (min-width: 980px) { 
@@ -66,9 +54,169 @@
         order: 5
     }
 }
-.prueba1 {
-    color: springgreen
+.sideMenu {
+    display: none;
 }
-.prueba2 {
-    color: salmon
+.nav {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: #10000C;
+    padding: 10px 0px 8px 5px;
+}
+
+.nav-header {
+    grid-column: span 2;
+    color: #EFA747;
+}
+.nav-title {
+    font-size: 22px;
+    padding: 6px 5px 10px 5px;
+    cursor: pointer;
+}
+.nav-mobile {
+    display: none;
+}
+.nav-links {
+    grid-column: span 10; 
+    font-size: 22px;
+    padding: 6px;
+    display: grid;
+    grid-template-columns: repeat(6, max-content);
+    grid-column-gap: 10px;
+    text-align: center;
+    position: none
+}
+a {
+    font-size: 20px;
+    font-weight: 500;
+    color: #8C7547;
+    overflow: hidden;
+    padding: 2px 10px 0px 10px;
+    cursor: pointer;
+    border-radius: 5px
+}
+a:hover {
+    border-bottom: 2px solid rgb(212, 148, 63);
+    color: #eee;
+}
+a:active {
+    border-bottom: 2px solid #EFA747;
+    color: white;
+    background-color: rgba(81, 91, 81, 0.201);
+}
+/*Css colors ideas http://blog.visme.co/color-combinations/*/
+@media (min-width: 851px) and (max-width: 980px) { 
+    .nav-header {
+        grid-column: span 3; 
+    }
+    .nav-links {
+        grid-column: span 9;
+        font-size: 20px;
+    }
+}
+/*Nav bar for mobile view */
+@media (max-width: 850px) {
+    .nav {
+        grid-template-columns: repeat(2, max-content);
+    }
+    .nav-mobile {
+        order: 1;
+        grid-column: span 1;
+        display: initial
+    }
+    .nav-header {
+        order: 2;
+        grid-column: span 1;
+    }
+    .nav-title {
+        font-size: 22px;
+        padding: 13px;
+    }
+    /*Toggle button*/
+    .nav-btn {
+        display: inline-block;
+        position: relative;
+        margin-left: 8px;
+        border-radius: 10px;
+        padding-top: 2px
+    }
+    label {
+        display: grid;
+        grid-gap: 2px;
+        width: 30px;
+        height: 30px;
+        padding: 10px 10px 7px 10px;
+        cursor: pointer;
+    }
+    /*Toggle button aimation*/
+    span {
+        display: block;
+        height: 2px;
+        background-color: white;
+        border-radius: 25px;
+    }
+    label:hover span {
+        height: 3px;
+    }
+    .nav-links {
+        display: none;
+    }
+
+
+    /*Estilos del menu cuando se abre y se cierra pushh off canvas con grid*/
+    .sideMenu {
+        grid-column: span 3;
+        grid-row: span 4;
+        text-align: left;
+        font-size: 20px;
+        margin-right: -0.5em;
+        background-color: #10000C;
+        display: grid;
+        grid-template-rows: repeat(5, max-content);
+    }
+    .sideMenu a {
+        padding: 20px;
+    }
+    .menu2 {
+        order: 2;
+        grid-column: span 9;
+    }
+    .left2 {
+        order: 3;
+        grid-column: span 9;
+        border: 3px solid lightseagreen;
+    }
+    .content2 {
+        order: 4;
+        grid-column: span 9;
+        border: 3px solid lightseagreen
+    }
+    .footer2 {
+        order: 5;
+        grid-column: span 9;
+        border: 3px solid lightseagreen;
+    }
+
+
+
+
+
+    .nav > .nav-links > a {
+        display: block;
+        width: 100%;
+    }
+    .nav > #nav-check:not(:checked) + .nav-links {
+        height: 0px;
+    }
+    .nav > #nav-check:checked + .nav-links {
+        height: calc(100px - 50px);
+        overflow-y: auto;
+        background-color: #EFA747
+    }
+    .hide {
+        display: none
+    }
+}
+.display {
+    grid-gap: 20px
 }

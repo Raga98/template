@@ -8,24 +8,19 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title = 'app';
-  
-  show: boolean = true;
-  noShow: boolean = false;
+
+  show = false;
+  noShow = true;
 
   toggle() {
-    this.show = !this.show
+    this.show = !this.show;
     if ( this.show ) {
-      this.noShow = false
+      this.noShow = false;
     } else {
-      this.noShow = true
+      this.noShow = true;
     }
   }
 }
-
-
-
-
-
 
 /*
 function myFunction() {
