@@ -4,7 +4,7 @@
     <div class="nav">
       <div class="nav-header">
           <div class="nav-title">
-            Titulo y logo
+              Espiriti Cima
           </div>
       </div>
       <div class="nav-mobile">
@@ -17,32 +17,31 @@
         </div>
       </div>
       <div class="nav-links">
-          <a routerLink="/team">Team</a>
-          <a>Products</a>
-          <a routerLink="/retro">Services</a>
-          <a routerLink="/blog">Blog</a>
-          <a routerLink="/contact">Contact</a>
+          <a routerLink="/inicio">Inicio</a>
+          <a routerLink="/conozcanos">Conozcanos</a>
+          <a routerLink="/cursos">Cursos</a>
+          <a routerLink="/biblioteca">Biblioteca</a>
       </div>
     </div>    
   </div>
-  <div [ngClass]="{'sideMenu': show, 'hide': noShow}">
+  <div [ngClass]="{'sideMenu-desplegation': show, 'hide': noShow}">
+      <div (click)="toggle()">
+      <span></span>
+      </div>
       <a routerLink="/team">Team</a>
       <a>Products</a>
       <a routerLink="/retro">Services</a>
       <a routerLink="/blog">Blog</a>
       <a routerLink="/contact">Contact</a>
+      <div class="publicity"></div>
   </div>
 
-  <div [ngClass]="{'left2': show}"  class="left">
-
+  <div class="left"></div>
+  <div class="content">
+    <app-content></app-content>
   </div>
-  <div [ngClass]="{'content2': show}" class="content">
-
-  </div>
-  <div class="right">
-
-  </div>
-  <div [ngClass]="{'footer2': show}" class="footer">
+  <div class="right"></div>
+  <div class="footer">
 
   </div>
 </div>
