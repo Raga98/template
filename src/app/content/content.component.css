@@ -13,7 +13,7 @@ h2 {
     letter-spacing: 2px;
     font-size: 35px;
     font-weight: 200;
-    color: lightseagreen;
+    color: rgb(146, 225, 221);
     text-transform: uppercase;
 }
 h3 {
@@ -21,6 +21,10 @@ h3 {
 }
 button {
     cursor: pointer;
+}
+.noticias {
+    display: grid;
+    grid-template-columns: repeat(1fr)
 }
 .noticias p {
     font-size: 15px;

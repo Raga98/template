@@ -17,10 +17,38 @@
         </div>
       </div>
       <div class="nav-links">
-          <a routerLink="/inicio">Inicio</a>
-          <a routerLink="/conozcanos">Conozcanos</a>
-          <a routerLink="/cursos">Cursos</a>
-          <a routerLink="/biblioteca">Biblioteca</a>
+        <div class="dropdown">
+            <button class="menubtn" routerLink="/content">Inicio</button>
+            <div class="dropdown-content">
+                <a href="#">Content</a>
+                <a href="#">Noticias</a>
+                <a href="#">Conferencias</a>
+                <a href="#">Conferencistas</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="menubtn" routerLink="/conozcanos">Conozcanos</button>
+            <div class="dropdown-content">
+                <a href="#">Quienes somos</a>
+                <a href="#">Doctrina</a>
+                <a href="#">Historia</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="menubtn" routerLink="/cursos">Cursos</button>
+            <div class="dropdown-content">
+                <a href="#">Actividades</a>
+                <a href="#">Opiniones</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="menubtn" routerLink="/biblioteca">Biblioteca</button>
+            <div class="dropdown-content">
+                <a href="#">Charlas</a>
+                <a href="#">Libros</a>
+                <a href="#">Bibliografias</a>
+            </div>
+        </div>
       </div>
     </div>    
   </div>
@@ -28,18 +56,45 @@
       <div (click)="toggle()">
       <span></span>
       </div>
-      <a routerLink="/team">Team</a>
-      <a>Products</a>
-      <a routerLink="/retro">Services</a>
-      <a routerLink="/blog">Blog</a>
-      <a routerLink="/contact">Contact</a>
+      <div class="dropdown">
+            <button class="menubtn" routerLink="/content">Inicio</button>
+            <div class="dropdown-content">
+                <a href="#">Content</a>
+                <a href="#">Noticias</a>
+                <a href="#">Conferencias</a>
+                <a href="#">Conferencistas</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="menubtn" routerLink="/conozcanos">Conozcanos</button>
+            <div class="dropdown-content">
+                <a href="#">Quienes somos</a>
+                <a href="#">Doctrina</a>
+                <a href="#">Historia</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="menubtn" routerLink="/cursos">Cursos</button>
+            <div class="dropdown-content">
+                <a href="#">Actividades</a>
+                <a href="#">Opiniones</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="menubtn" routerLink="/biblioteca">Biblioteca</button>
+            <div class="dropdown-content">
+                <a href="#">Charlas</a>
+                <a href="#">Libros</a>
+                <a href="#">Bibliografias</a>
+            </div>
+        </div>
       <div class="publicity"></div>
   </div>
 
   <div class="left"></div>
   <div class="content">
+        <router-outlet></router-outlet>
   </div>
-  <router-outlet></router-outlet>
   <div class="right"></div>
   <div class="footer">
 

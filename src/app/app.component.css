@@ -7,14 +7,16 @@
 }
 .menu {
     grid-column: span 12;
+    position: sticky;
+    top: 0;
 }
 .left {
     display: none;
 }
 .content {
     grid-column: span 12;
-    padding: 20px;
     color: white;
+    padding: 20px 25px;
 }
 .right {
     display: none
@@ -51,7 +53,7 @@
     padding-top: 4px;
 }
 .nav-title {
-    font-size: 25px;
+    font-size: 28px;
     padding: 10px;
     cursor: pointer;
 }
@@ -68,23 +70,20 @@
     text-align: center;
     position: none
 }
-a {
+.menubtn {
     font-size: 22px;
     font-weight: 500;
-    color:#B9E5F3;
-    overflow: hidden;
     padding: 10px;
     cursor: pointer;
-    border-radius: 5px
-}
-a:hover {
-    border-bottom: 1px solid lightseagreen;
-    color: #eee;
-}
-a:active {
-    border-bottom: 1px solid lightseagreen;
+    border-radius: 5px;
     color: white;
+    font-size: 22px;
+    border: none;
+    background-color: transparent;
 }
+
+
+
 
 /*Medium size view*/
 /*Css colors ideas http://blog.visme.co/color-combinations/ */
@@ -174,11 +173,50 @@ a:active {
         position: absolute;
         padding-top: 7px;
         text-align: center;
-        font-size: 25px;
-        background-color: rgba(16, 0, 12, 0.959);
+        font-size: 22px;
+        background-color: rgba(185, 229, 243, 0.901960784313);
         display: grid;
         grid-row-gap: 20px;
         grid-template-rows: repeat(8, max-content, 1fr);
+        border-right: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .menubtn {
+        font-size: 22px;
+        font-weight: 500;
+        padding: 12px;
+        cursor: pointer;
+        border-radius: 5px;
+        color: black;
+        font-size: 22px;
+        border: none;
+        background-color: transparent;
+    }
+    .dropdown-content {
+        position: absolute;
+        margin-left: 230px;
+        margin-top: -52px;
+        display: none;
+        background-color: #B9E5F3;
+        min-width: 180px;
+        border: 1px solid black;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 10px;
+        text-align: left
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    a:hover {
+        font-weight: 600;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
     .sideMenu-desplegation a {
         padding: 20px;
@@ -205,4 +243,65 @@ a:active {
     .hide {
         display: none;
     }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border-radius: 5px
+}
+.dropdown-content {
+    position: absolute;
+    display: none;
+    background-color: rgba(185, 229, 243, 0.901960784313);
+    min-width: 180px;
+    border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    text-align: left
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+a:hover {
+    font-weight: 600;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+a {
+    font-size: 22px;
+    font-weight: 500;
+    color:#B9E5F3;
+    overflow: hidden;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+a:hover {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    color: #eee;
+    font-weight: 700px;
+}
+a:active {
+    border-bottom: 1px solid lightseagreen;
+    color: white;
+}
+.dropdown:hover {
+    border-top: 1px solid lightseagreen;
+    font-weight: 700;
+    color: #eee;
+}
+.dropdown:active {
+    border-top: 1px solid lightseagreen;
+    color: #eee;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
 }
