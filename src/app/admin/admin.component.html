@@ -1,6 +1,6 @@
 <form action="/my-handling-form-page" method="post">
   <div class="forms">
-      <label for="title">Titular de la Noticia</label>
+      <label [(ngModel)] = 'pubs.title' for="title">Titular de la Noticia</label>
       <input type="text" id="title" />
   </div>
   <div class="forms">
@@ -12,17 +12,19 @@
       <input id="time" type="time">
   </div>
   <div class="forms">
-      <label for="msg">Corta reseña de la noticia</label>
+      <label [(ngModel)] = 'pubs.description' for="msg">Corta reseña de la noticia</label>
       <textarea id="msg"></textarea>
   </div>
   <div class="forms">
-      <label for="msg">Noticia completa</label>
+      <label  [(ngModel)] = 'pubs.news' for="msg">Noticia completa</label>
       <textarea id="msg"></textarea>
   </div>
   <div class="button">
-      <button type="submit">Publicar noticia en la página</button>
+      <button (click) = 'createPub()' type="submit">Publicar noticia en la página</button>
   </div>
 </form>
 <div class="button" routerLink="/login">   
-  <button type="submit"> LogOut</button>
+  <button (click) = adminSignOut() type="submit"> LogOut</button>
+
+
 </div>

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../services/login.service';
+import { Router } from '@angular/router';
+import {AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loginService: LoginService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+
+  loginGoogle(){
+  this.loginService.loginGo();  
+}
 
 }
