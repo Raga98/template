@@ -4,6 +4,8 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto 1fr 300px;
+    background-image: url("../assets/uni5.jpg");
+    background-repeat:repeat;
 }
 .menu {
     grid-column: span 12;
