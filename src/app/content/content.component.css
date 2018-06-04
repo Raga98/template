@@ -11,9 +11,9 @@ div {
 h2 {
     text-align: center;
     letter-spacing: 2px;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 200;
-    color: rgb(146, 225, 221);
+    color: rgb(23, 60, 58);
     text-transform: uppercase;
 }
 h3 {
@@ -28,4 +28,21 @@ button {
 }
 .noticias p {
     font-size: 15px;
+}
+.conferencias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+}
+h2 {
+    grid-column: span 2; 
+}
+
+.conferencistas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 15px;
+}
+.conferencistas h2 {
+    grid-column: span 3;
 }

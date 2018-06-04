@@ -4,8 +4,6 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto 1fr 300px;
-    background-image: url("../assets/uni5.jpg");
-    background-repeat:repeat;
 }
 .menu {
     grid-column: span 12;
@@ -17,7 +15,7 @@
 }
 .content {
     grid-column: span 12;
-    color: white;
+    color: black;
     padding: 20px 25px;
 }
 .right {
@@ -44,18 +42,17 @@
 .nav {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    background-color: #4F728E;
+    background-color: rgba(80, 114, 143);
     padding: 18px 0px 10px 15px;
-    height: 60px;
+    height: 50px;
 }
 
 .nav-header {
     grid-column: span 2;
     color: #B9E5F3;
-    padding-top: 4px;
 }
 .nav-title {
-    font-size: 28px;
+    font-size: 21px;
     padding: 10px;
     cursor: pointer;
 }
@@ -64,22 +61,20 @@
 }
 .nav-links {
     grid-column: span 10; 
-    padding: 6px;
     padding-left: 20px;
     display: grid;
     grid-template-columns: repeat(6, max-content);
     grid-column-gap: 25px;
     text-align: center;
-    position: none
+    position: none;
 }
 .menubtn {
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 500;
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
     color: white;
-    font-size: 22px;
     border: none;
     background-color: transparent;
 }
@@ -240,7 +235,6 @@
     }
     .publicity {
         display: initial;
-        height: 1000px; /*Mientras tanto*/
     }
     .hide {
         display: none;
