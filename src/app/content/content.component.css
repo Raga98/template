@@ -8,20 +8,6 @@ div {
     font-family:  "Montserrat", sans-serif;
     letter-spacing: 1px;
 }
-h2 {
-    text-align: center;
-    letter-spacing: 2px;
-    font-size: 32px;
-    font-weight: 200;
-    color: rgb(23, 60, 58);
-    text-transform: uppercase;
-}
-h3 {
-    text-transform: uppercase;   
-}
-button {
-    cursor: pointer;
-}
 .noticias {
     display: grid;
     grid-template-columns: repeat(1fr)
@@ -34,10 +20,9 @@ button {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 20px;
 }
-h2 {
+.conferencias h2 {
     grid-column: span 2; 
 }
-
 .conferencistas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
