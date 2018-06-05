@@ -1,6 +1,6 @@
 <div class="container">
 
-  <div [ngClass]="{'menu2': show, '': noShow}" class="menu">
+    <div [ngClass]="{'menu2': show, '': noShow}" class="menu">
     <div class="nav">
       <div class="nav-header">
           <div class="nav-title">
@@ -52,11 +52,11 @@
       </div>
     </div>    
   </div>
-  <div [ngClass]="{'sideMenu-desplegation': show, 'hide': noShow}">
-      <div (click)="toggle()">
-      <span></span>
-      </div>
-      <div class="dropdown">
+    <div [ngClass]="{'sideMenu-desplegation': show, 'hide': noShow}">
+        <div (click)="toggle()">
+        <span></span>
+        </div>
+        <div class="dropdown">
             <button class="menubtn" routerLink="/content">Inicio</button>
             <div class="dropdown-content">
                 <a href="#">Content</a>
@@ -88,9 +88,8 @@
                 <a href="#">Bibliografias</a>
             </div>
         </div>
-      <div class="publicity"></div>
-  </div>
-
+        <div class="publicity"></div>
+    </div>
   <div class="left"></div>
   <div class="content">
         <router-outlet></router-outlet>

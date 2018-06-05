@@ -23,7 +23,11 @@
     "@angular/router": "^5.2.0",
     "angularfire2": "5.0.0-rc.9",
     "core-js": "^2.4.1",
+<<<<<<< HEAD
     "firebase": "4.8.0",
+=======
+    "firebase": "^4.8.0",
+>>>>>>> c0f9d908f36b756138dbfed639a8dd78fd93ad4c
     "generator-node-modules": "^4.5.0",
     "promise-polyfill": "^8.0.0",
     "rxjs": "^5.5.6",

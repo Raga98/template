@@ -2,5 +2,23 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    background-color: #253F5B
+    background-image: url("/assets/roses.jpg");
+    background-repeat:repeat;
+}
+h2 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 32px;
+    font-weight: 200;
+    color: rgb(23, 60, 58);
+    text-transform: uppercase;
+}
+h3 {
+    text-transform: uppercase;   
+}
+p {
+    font-size: 17px;
+}
+button {
+    cursor: pointer;
 }

@@ -13,10 +13,18 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import {initializeApp, database} from 'firebase';
 import {FormsModule} from '@angular/forms';
 
+import { FormsModule } from '@angular/forms';
+import { ConozcanosComponent } from './conozcanos/conozcanos.component';
+import { CursosComponent } from './cursos/cursos.component';
+import { BibliotecaComponent } from './biblioteca/biblioteca.component';
+
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent },
+  { path: 'conozcanos', component: ConozcanosComponent },
+  { path: 'cursos', component: CursosComponent },
+  { path: 'biblioteca', component: BibliotecaComponent },
   { path: '', redirectTo: '/content', pathMatch: 'full' },
   { path: '**', redirectTo: '/content', pathMatch: 'full' },
 ];
@@ -27,6 +35,9 @@ const appRoutes: Routes = [
     ContentComponent,
     LoginComponent,
     AdminComponent,
+    ConozcanosComponent,
+    CursosComponent,
+    BibliotecaComponent,
   ],
   imports: [
     RouterModule.forRoot(
