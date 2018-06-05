@@ -1,7 +1,7 @@
 <form action="/my-handling-form-page" method="post">
   <div class="forms">
-      <label [(ngModel)] = 'pubs.title' for="title">Titular de la Noticia</label>
-      <input type="text" id="title" />
+      <label  for="title">Titular de la Noticia</label>
+      <input [(ngModel)] = 'pubs.title' type="text" id="title" />
   </div>
   <div class="forms">
       <label for="mail">Dia de publicación</label>
@@ -12,11 +12,13 @@
       <input id="time" type="time">
   </div>
   <div class="forms">
-      <label [(ngModel)] = 'pubs.description' for="msg">Corta reseña de la noticia</label>
+      <label for="msg">Corta reseña de la noticia</label>
       <textarea id="msg"></textarea>
+      <input [(ngModel)] = 'pubs.description' type="text" id="description" />
   </div>
   <div class="forms">
-      <label  [(ngModel)] = 'pubs.news' for="msg">Noticia completa</label>
+      <label  for="msg">Noticia completa</label>
+      <input [(ngModel)] = 'pubs.news' type="text" id="news" />
       <textarea id="msg"></textarea>
   </div>
   <div class="button">

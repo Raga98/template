@@ -19,7 +19,7 @@ export class PubsService {
       return changes.map(a => {
         const data = a.payload.doc.data() as Pubs;
         const id = a.payload.doc.id;
-        return {id, ...data};
+        return {id,...data};
        });
      });
    }
