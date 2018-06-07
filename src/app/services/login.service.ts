@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {AngularFireAuth } from 'angularfire2/auth';
 import { Router } from '@angular/router';
 import { User } from '../models/user';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import * as firebase from 'firebase';
 
 

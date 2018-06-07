@@ -10,13 +10,15 @@ import { AdminComponent } from './admin/admin.component';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from "angularfire2/auth";
 import {initializeApp, database} from 'firebase';
 import {FormsModule} from '@angular/forms';
-
-import { FormsModule } from '@angular/forms';
 import { ConozcanosComponent } from './conozcanos/conozcanos.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { BibliotecaComponent } from './biblioteca/biblioteca.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { LoginService } from './services/login.service';
 
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
@@ -48,8 +50,11 @@ const appRoutes: Routes = [
     AngularFirestoreModule,
     BrowserModule,
     FormsModule,
+    HttpClientModule,
+    HttpModule,
+    AngularFireAuthModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [LoginService],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
