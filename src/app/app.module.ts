@@ -23,6 +23,7 @@ import { NoticiasComponent } from './noticias/noticias.component';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { ConferencistasComponent } from './conferencistas/conferencistas.component';
 import { ConferenciasComponent } from './conferencias/conferencias.component';
+import { PubsService } from './services/pubs.service';
 
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
@@ -62,7 +63,7 @@ const appRoutes: Routes = [
     HttpModule,
     AngularFireAuthModule
   ],
-  providers: [LoginService],
+  providers: [LoginService, PubsService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
