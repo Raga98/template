@@ -19,6 +19,10 @@ import { BibliotecaComponent } from './biblioteca/biblioteca.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { LoginService } from './services/login.service';
+import { NoticiasComponent } from './noticias/noticias.component';
+import { ArticulosComponent } from './articulos/articulos.component';
+import { ConferencistasComponent } from './conferencistas/conferencistas.component';
+import { ConferenciasComponent } from './conferencias/conferencias.component';
 
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
@@ -40,6 +44,10 @@ const appRoutes: Routes = [
     ConozcanosComponent,
     CursosComponent,
     BibliotecaComponent,
+    NoticiasComponent,
+    ArticulosComponent,
+    ConferencistasComponent,
+    ConferenciasComponent,
   ],
   imports: [
     RouterModule.forRoot(

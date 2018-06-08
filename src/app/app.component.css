@@ -2,27 +2,20 @@
 .container {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto 1fr 300px;
 }
 .menu {
-    grid-column: span 12;
     position: sticky;
     top: 0;
 }
-.left {
-    display: none;
-}
 .content {
-    grid-column: span 12;
     color: black;
-    padding: 20px 25px;
-}
-.right {
-    display: none
+    padding: 20px 40px;
+    background-color: rgba(145, 143, 143, 0.519);
+    margin: 20px;
+    border-radius: 25px;
 }
 .footer {
-    grid-column: span 12;
     background-color: #4F728E;
     margin-bottom: 0px
 }
@@ -42,18 +35,20 @@
 .nav {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    background-color: rgba(80, 114, 143);
+    background-color: rgba(88, 151, 204);
     padding: 18px 0px 10px 15px;
     height: 50px;
 }
 
 .nav-header {
     grid-column: span 2;
-    color: #B9E5F3;
+    color: rgba(24, 50, 243);
+
 }
 .nav-title {
-    font-size: 21px;
-    padding: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 7px;
     cursor: pointer;
 }
 .nav-mobile {
@@ -81,7 +76,16 @@
 
 
 
-
+/*Big size view*/
+@media (min-width: 981px) { 
+    .container {
+        grid-template-rows: auto 1fr 80px;
+        font-size: 20px;
+    }
+    .content {
+        margin: 30px 100px;
+    }
+}
 /*Medium size view*/
 /*Css colors ideas http://blog.visme.co/color-combinations/ */
 @media (min-width: 851px) and (max-width: 980px) { 
@@ -93,26 +97,6 @@
         font-size: 20px;
     }
 }
-
-/*Big size view*/
-@media (min-width: 980px) { 
-    .container {
-        grid-template-rows: auto 1fr 80px;
-        font-size: 20px;
-    }
-    .left {
-        grid-column: span 2;
-        display: initial
-    }
-    .content {
-        grid-column: span 8;
-    }
-    .right {
-        grid-column: span 2;
-        display: initial
-    }
-}
-
 /*Nav bar for mobile view */
 @media (max-width: 850px) {
     .nav {
@@ -171,7 +155,7 @@
         padding-top: 7px;
         text-align: center;
         font-size: 22px;
-        background-color: rgba(185, 229, 243, 0.901960784313);
+        background-color: rgba(116, 168, 211, 0.9);
         display: grid;
         grid-row-gap: 20px;
         grid-template-rows: repeat(8, max-content, 1fr);
@@ -181,7 +165,6 @@
     }
     .menubtn {
         font-size: 22px;
-        font-weight: 500;
         padding: 12px;
         cursor: pointer;
         border-radius: 5px;
@@ -195,7 +178,6 @@
         margin-left: 230px;
         margin-top: -52px;
         display: none;
-        background-color: #B9E5F3;
         min-width: 180px;
         border: 1px solid black;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -249,7 +231,7 @@
 .dropdown-content {
     position: absolute;
     display: none;
-    background-color: rgba(185, 229, 243, 0.901960784313);
+    background-color: rgba(157, 189, 216, 0.897);
     min-width: 180px;
     border: 1px solid black;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -263,39 +245,19 @@
     text-decoration: none;
     display: block;
 }
-a:hover {
-    font-weight: 600;
-}
 .dropdown:hover .dropdown-content {
     display: block;
 }
 a {
     font-size: 22px;
     font-weight: 500;
-    color:#B9E5F3;
     overflow: hidden;
-    padding: 10px;
     cursor: pointer;
     border-radius: 5px;
-    text-decoration: none;
 }
 a:hover {
     border-bottom: 1px solid black;
     border-top: 1px solid black;
-    color: #eee;
-    font-weight: 700px;
-}
-a:active {
-    border-bottom: 1px solid lightseagreen;
-    color: white;
-}
-.dropdown:hover {
-    border-top: 1px solid lightseagreen;
-    font-weight: 700;
-    color: #eee;
-}
-.dropdown:active {
-    border-top: 1px solid lightseagreen;
     color: #eee;
 }
 .dropdown:hover .dropdown-content {

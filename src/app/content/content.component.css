@@ -1,33 +1,11 @@
 /*CSS de la página content*/
 .container {
     display: grid;
-    grid-gap: 25px;
+    grid-gap: 45px;
 }
-div {
+.container div {
     text-align: justify;
     font-family:  "Montserrat", sans-serif;
     letter-spacing: 1px;
 }
-.noticias {
-    display: grid;
-    grid-template-columns: repeat(1fr)
-}
-.noticias p {
-    font-size: 15px;
-}
-.conferencias {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 20px;
-}
-.conferencias h2 {
-    grid-column: span 2; 
-}
-.conferencistas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 15px;
-}
-.conferencistas h2 {
-    grid-column: span 3;
-}
+
