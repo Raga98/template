@@ -23,6 +23,10 @@ import { NoticiasComponent } from './noticias/noticias.component';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { ConferencistasComponent } from './conferencistas/conferencistas.component';
 import { ConferenciasComponent } from './conferencias/conferencias.component';
+import { VideosComponent } from './videos/videos.component';
+import { LibrosComponent } from './libros/libros.component';
+import { BibliografiasComponent } from './bibliografias/bibliografias.component';
+import { GrafiasComponent } from './grafias/grafias.component';
 
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
@@ -31,6 +35,7 @@ const appRoutes: Routes = [
   { path: 'conozcanos', component: ConozcanosComponent },
   { path: 'cursos', component: CursosComponent },
   { path: 'biblioteca', component: BibliotecaComponent },
+  { path: 'articulos', component: ArticulosComponent },
   { path: '', redirectTo: '/content', pathMatch: 'full' },
   { path: '**', redirectTo: '/content', pathMatch: 'full' },
 ];
@@ -48,6 +53,10 @@ const appRoutes: Routes = [
     ArticulosComponent,
     ConferencistasComponent,
     ConferenciasComponent,
+    VideosComponent,
+    LibrosComponent,
+    BibliografiasComponent,
+    GrafiasComponent,
   ],
   imports: [
     RouterModule.forRoot(

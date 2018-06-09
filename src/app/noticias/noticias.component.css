@@ -2,25 +2,43 @@
     display: grid;
     grid-column-gap: 35px;
     grid-row-gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr))
 }
 .h2 {
     grid-column: 1fr
 }
-.noticias p {
+p {
     font-size: 13px;
     margin: 0;
 }
 .articulos {
     margin: 10px 0px;
     display: grid;
-    grid-gap: 10px
+    grid-gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f5f3f39e;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 button {
+    font-size: 15px;
     cursor: pointer;
-    max-width: 120px;
     text-align: center;
     margin: auto;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: lightblue;
+}
+button:hover {
+    background-color: rgb(199, 228, 238);
+}
+.btn {
+    width: 50%;
+    margin: 0 auto;
+}
+.contanier {
+    margin: 0 auto;
 }
 /*
 @media (min-width: 851px) and (max-width: 1230px) {
