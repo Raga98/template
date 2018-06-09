@@ -1,32 +1,33 @@
 <form action="/my-handling-form-page" method="post">
-  <div class="forms">
-      <label  for="title">Titular de la Noticia</label>
-      <input [(ngModel)] = 'pubs.title' type="text" id="title" />
+    <div class="forms">
+        <label  for="title">Titular de la Noticia</label>
+        <input [(ngModel)] = 'pubs.title' type="text" id="title" />
+    </div>
+    <div class="forms">
+        <label for="mail">Dia de publicación</label>
+        <input id="date" type="date">
+    </div>
+    <div class="forms">
+        <label for="mail">Hora de publicación</label>
+        <input id="time" type="time">
+    </div>
+    <div class="forms">
+        <label for="msg">Corta reseña de la noticia</label>
+        <textarea id="msg"></textarea>
+        <input [(ngModel)] = 'pubs.description' type="text" id="description" />
+    </div>
+    <div class="forms">
+        <label  for="msg">Noticia completa</label>
+        <input [(ngModel)] = 'pubs.news' type="text" id="news" />
+        <textarea id="msg"></textarea>
+    </div>
+    <div class="button">
+        <button (click) = 'createPub(pubs)' type="submit">Publicar noticia en la página</button>
+    </div>
+  </form>
+  <div class="button" routerLink="/login">   
+    <button (click) = adminSignOut() type="submit"> LogOut</button>
+  
+  
   </div>
-  <div class="forms">
-      <label for="mail">Dia de publicación</label>
-      <input id="date" type="date">
-  </div>
-  <div class="forms">
-      <label for="mail">Hora de publicación</label>
-      <input id="time" type="time">
-  </div>
-  <div class="forms">
-      <label for="msg">Corta reseña de la noticia</label>
-      <textarea id="msg"></textarea>
-      <input [(ngModel)] = 'pubs.description' type="text" id="description" />
-  </div>
-  <div class="forms">
-      <label  for="msg">Noticia completa</label>
-      <input [(ngModel)] = 'pubs.news' type="text" id="news" />
-      <textarea id="msg"></textarea>
-  </div>
-  <div class="button">
-      <button (click) = 'createPub()' type="submit">Publicar noticia en la página</button>
-  </div>
-</form>
-<div class="button" routerLink="/login">   
-  <button (click) = adminSignOut() type="submit"> LogOut</button>
-
-
-</div>
+  

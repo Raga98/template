@@ -27,6 +27,7 @@ import { VideosComponent } from './videos/videos.component';
 import { LibrosComponent } from './libros/libros.component';
 import { BibliografiasComponent } from './bibliografias/bibliografias.component';
 import { GrafiasComponent } from './grafias/grafias.component';
+import { PubsService } from './services/pubs.service';
 
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
@@ -71,7 +72,7 @@ const appRoutes: Routes = [
     HttpModule,
     AngularFireAuthModule
   ],
-  providers: [LoginService],
+  providers: [LoginService, PubsService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -18,5 +18,9 @@ export class LoginComponent implements OnInit {
   loginGoogle(){
   this.loginService.loginGo();  
 }
+  
+  gotoConozcanos(){
+    this.loginService.gotoConozcanos();
+  }
 
 }
