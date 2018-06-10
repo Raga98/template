@@ -25,7 +25,7 @@ import { ConferencistasComponent } from './conferencistas/conferencistas.compone
 import { ConferenciasComponent } from './conferencias/conferencias.component';
 import { VideosComponent } from './videos/videos.component';
 import { LibrosComponent } from './libros/libros.component';
-import { BibliografiasComponent } from './bibliografias/bibliografias.component';
+import { BibliografiasComponent } from './biografias/biografias.component';
 import { GrafiasComponent } from './grafias/grafias.component';
 import { PubsService } from './services/pubs.service';
 
@@ -39,6 +39,10 @@ const appRoutes: Routes = [
   { path: 'articulos', component: ArticulosComponent },
   { path: '', redirectTo: '/content', pathMatch: 'full' },
   { path: '**', redirectTo: '/content', pathMatch: 'full' },
+
+  { path: 'noticias', component: NoticiasComponent },
+  { path: 'conferencias', component: ConferenciasComponent },
+  { path: 'conferencistas', component: ConferencistasComponent },
 ];
 
 @NgModule({

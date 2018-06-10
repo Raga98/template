@@ -2,8 +2,9 @@
 .container {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr 300px;
+    grid-template-rows: auto 1fr;
     background-image: url("/assets/uni3.jpeg");
+    /*#7c9b9c */
 }
 .menu {
     position: sticky;
@@ -18,8 +19,29 @@
     border-radius: 25px;
 }
 .footer {
-    background-color: #4F728E;
-    margin-bottom: 0px
+    background-color: #ccc8b1;
+    /*rgba(51, 138, 158) */
+    margin-bottom: 0px;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-rows: max-content;
+}
+.footer > div {
+    padding: 20px 20px;
+}
+.footer p {
+    margin: 5px 0px
+}
+form {
+    display: grid;
+    grid-row-gap: 10px;
+}
+label {
+    font-size: 17px;
+}
+.forma {
+    display: grid;
+    grid-template-columns: 140px auto;
 }
 
 /*Propiedad del sidemenu mientras esta abierto en mayores pantallas*/
@@ -37,7 +59,9 @@
 .nav {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    background-color: rgba(88, 151, 204);
+    /*background-color: rgba(88, 151, 204);*/
+    /*rgb(210, 203, 179); rgba(51, 138, 158)*/
+    background-color: #ccc8b1;
     padding: 18px 0px 10px 15px;
     height: 50px;
 }
@@ -80,11 +104,14 @@
 /*Big size view*/
 @media (min-width: 1300px) { 
     .container {
-        grid-template-rows: auto 1fr 80px;
+        grid-template-rows: auto 1fr;
         font-size: 20px;
     }
     .content {
         margin: 30px 200px;
+    }
+    .footer {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 /*Medium size view*/
@@ -99,6 +126,9 @@
     }
     .content {
         margin: 30px 100px;
+    }
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 /*Nav bar for mobile view */
@@ -127,7 +157,7 @@
         border-radius: 10px;
         padding-top: 2px
     }
-    label {
+    .nav-span {
         display: grid;
         grid-gap: 2px;
         width: 30px;
@@ -142,7 +172,7 @@
         background-color: white;
         border-radius: 25px;
     }
-    label:hover span {
+    .nav-span:hover span {
         height: 3px;
     }
     .nav-links {
@@ -155,7 +185,7 @@
     .sideMenu-desplegation {
         margin: auto;
         float: left;
-        position: absolute;
+        position: fixed;
         padding-top: 7px;
         text-align: center;
         font-size: 22px;
@@ -163,9 +193,10 @@
         display: grid;
         grid-row-gap: 20px;
         grid-template-rows: repeat(8, max-content, 1fr);
-        border-right: 1px solid black;
-        border-radius: 5px;
+        border: 1px solid rgb(77, 113, 179);
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        margin-top: 80px;
+        width: 200px;
     }
     .menubtn {
         font-size: 22px;
@@ -179,7 +210,7 @@
     }
     .dropdown-content {
         position: absolute;
-        margin-left: 230px;
+        margin-left: 200px;
         margin-top: -52px;
         display: none;
         min-width: 180px;
@@ -194,9 +225,6 @@
         padding: 12px 16px;
         text-decoration: none;
         display: block;
-    }
-    a:hover {
-        font-weight: 600;
     }
     .dropdown:hover .dropdown-content {
         display: block;
@@ -225,6 +253,11 @@
     .hide {
         display: none;
     }
+
+    .form {
+        grid-column: span 2;
+        padding: 20px 30px
+    }
 }
 
 .dropdown {
@@ -235,7 +268,8 @@
 .dropdown-content {
     position: absolute;
     display: none;
-    background-color: rgba(157, 189, 216, 0.897);
+    /*background-color: rgba(157, 189, 216, 0.897);*/
+    background-color: #dcd4a9;
     min-width: 180px;
     border: 1px solid black;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);

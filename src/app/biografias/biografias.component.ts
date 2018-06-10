@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bibliografias',
-  templateUrl: './bibliografias.component.html',
-  styleUrls: ['./bibliografias.component.css']
+  selector: 'biografias',
+  templateUrl: './biografias.component.html',
+  styleUrls: ['./biografias.component.css']
 })
 export class BibliografiasComponent implements OnInit {
 
