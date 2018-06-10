@@ -25,7 +25,7 @@ export class LoginService {
     else{
       this.router.navigate(['/content']);
     }
-      if (user.email == "oscar.272731@gmail.com"){
+      if (user.email == "oscar.272731@gmail.com" || user.email == "ragajeremy@gmail.com"){
         this.router.navigate(['/admin']); //WORKS..
       } 
     }); 
