@@ -1,57 +1,56 @@
 <div class="container">
-
-        <div [ngClass]="{'sideMenu-desplegation': show, 'hide': noShow}">
-                <div class="dropdown">
-                    <button class="menubtn" routerLink="/content">Inicio</button>
-                    <div class="dropdown-content">
-                        <a href="#">Content</a>
-                        <a href="#">Noticias</a>
-                        <a href="#">Conferencias</a>
-                        <a href="#">Conferencistas</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="menubtn" routerLink="/conozcanos">Conozcanos</button>
-                    <div class="dropdown-content">
-                        <a href="#">Quienes somos</a>
-                        <a href="#">Doctrina</a>
-                        <a href="#">Historia</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="menubtn" routerLink="/cursos">Cursos</button>
-                    <div class="dropdown-content">
-                        <a href="#">Actividades</a>
-                        <a href="#">Opiniones</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="menubtn" routerLink="/biblioteca">Biblioteca</button>
-                    <div class="dropdown-content">
-                        <a href="#">Charlas</a>
-                        <a href="#">Libros</a>
-                        <a href="#">Bibliografias</a>
-                    </div>
-                </div>
-                <div class="publicity"></div>
+    <!--Vista del menu movil-->
+    <div [ngClass]="{'sideMenu-desplegation': show, 'hide': noShow}">
+        <div class="dropdown">
+            <button class="menubtn" routerLink="/content">Inicio</button>
+            <div class="dropdown-content">
+                <a href="#">Content</a>
+                <a href="#">Noticias</a>
+                <a href="#">Conferencias</a>
+                <a href="#">Conferencistas</a>
             </div>
-
-
+        </div>
+        <div class="dropdown">
+            <button class="menubtn" routerLink="/conozcanos">Conozcanos</button>
+            <div class="dropdown-content">
+                <a href="#">Quienes somos</a>
+                <a href="#">Doctrina</a>
+                <a href="#">Historia</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="menubtn" routerLink="/cursos">Cursos</button>
+            <div class="dropdown-content">
+                <a href="#">Actividades</a>
+                <a href="#">Opiniones</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="menubtn" routerLink="/biblioteca">Biblioteca</button>
+            <div class="dropdown-content">
+                <a href="#">Charlas</a>
+                <a href="#">Libros</a>
+                <a href="#">Bibliografias</a>
+            </div>
+        </div>
+        <div class="publicity"></div>
+    </div>
+    <!-- Vista del menu normal -->
     <div [ngClass]="{'menu2': show, '': noShow}" class="menu">
         <div class="nav">
             <div class="nav-header">
-                <div class="nav-title">
+                <div class="nav-title" routerLink="/admin">
                     Espirita Cima
                 </div>
             </div>
             <div class="nav-mobile">
-            <div class="nav-btn">
-                <label class="nav-span" for="nav-check" (click)="toggle()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </div>
+                <div class="nav-btn">
+                    <label class="nav-span" for="nav-check" (click)="toggle()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
             </div>
             <div class="nav-links">
             <div class="dropdown">
@@ -90,94 +89,94 @@
         </div>    
     </div>
 
-  <div class="content">
-    <router-outlet></router-outlet>
-  </div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
 
-  <div class="footer">
-    <div>
-        <h3>Ubicación</h3>
-        <h4>Caracas</h4>
-        <p>
-            Dirección: 
-            Avenida Urdaneta, Edificio "Iberia" piso 16 
-            (frente al Edificio El Universal), La Candelaria. 
-            Telfs: (0212) 563.0316 
-            Dirección Postal: Apartado 3425. 
-            CARACAS 1010-A - VENEZUELA.
-        </p>
-        <h4>Maracay</h4>
-        <p>
-            Dirección: Avenida Páez (este) Nº 132, 
-            Edificio "CIMA" (detrás del Teatro de la Opera).
-            Dirección Postal:Apartado 649. 
-            MARACAY 2101. VENEZUELA 
-            Telfs: (0243) 233.0262 
-        </p>
-    </div>
-    <div>
-        <h3>Directivos Cima</h3>
-        <p>
-            <b>Sedes Caracas / Maracay</b>
+    <div class="footer">
+        <div>
+            <h3>Ubicación</h3>
+            <h4>Caracas</h4>
+            <p>
+                Dirección: 
+                Avenida Urdaneta, Edificio "Iberia" piso 16 
+                (frente al Edificio El Universal), La Candelaria. 
+                Telfs: (0212) 563.0316 
+                Dirección Postal: Apartado 3425. 
+                CARACAS 1010-A - VENEZUELA.
+            </p>
+            <h4>Maracay</h4>
+            <p>
+                Dirección: Avenida Páez (este) Nº 132, 
+                Edificio "CIMA" (detrás del Teatro de la Opera).
+                Dirección Postal:Apartado 649. 
+                MARACAY 2101. VENEZUELA 
+                Telfs: (0243) 233.0262 
+            </p>
+        </div>
+        <div>
+            <h3>Directivos Cima</h3>
+            <p>
+                <b>Sedes Caracas / Maracay</b>
 
-            <b>Presidente nacional</b> - Jon Aizpúrua
-            
-            <b>Director CIMA Caracas</b> - Álvaro Latorre
-            
-            <b>Director CIMA Maracay</b> - Tereza de Álvarez
-        </p>
-        <h4>Directivos del Cima Caracas</h4>
-        <p>
-            Yolanda Clavijo
-            Leida de Ochoa
-            Oswaldo Campos
-            Jesús Briceño
-            Margarita Hernández
-            Vicente Ríos
-            Víctor Da Silva
-            Olga Sosa
-        </p>
-        <h4>Directivos del Cima Maracay</h4>
-        <p>
-            Teresa de Álvarez
-            Reina de Suárez
-            Félix Vega
-            Antulio Malavé
-            Germán Muñoz
-            Ilse Blanco
-            Carmen Osta de Blanco
-        </p>
+                <b>Presidente nacional</b> - Jon Aizpúrua
+                
+                <b>Director CIMA Caracas</b> - Álvaro Latorre
+                
+                <b>Director CIMA Maracay</b> - Tereza de Álvarez
+            </p>
+            <h4>Directivos del Cima Caracas</h4>
+            <p>
+                Yolanda Clavijo
+                Leida de Ochoa
+                Oswaldo Campos
+                Jesús Briceño
+                Margarita Hernández
+                Vicente Ríos
+                Víctor Da Silva
+                Olga Sosa
+            </p>
+            <h4>Directivos del Cima Maracay</h4>
+            <p>
+                Teresa de Álvarez
+                Reina de Suárez
+                Félix Vega
+                Antulio Malavé
+                Germán Muñoz
+                Ilse Blanco
+                Carmen Osta de Blanco
+            </p>
+        </div>
+        <div class="form">
+            <p>Pongase en contacto con nosotros</p>
+            <form>
+                <div class="forma">
+                    <label>Nombre y Apellido:</label>
+                    <input>
+                </div>
+                <div class="forma">
+                    <label>Email:</label>
+                    <input>          
+                </div>
+                <div class="forma">
+                    <label>Teléfono:</label>
+                    <input>       
+                </div>
+                <div class="forma">
+                    <label>Ciudad:</label>
+                    <input>
+                </div>
+                <div class="forma">
+                    <label>Razón de contacto:</label>
+                    <input>
+                </div>
+                <div class="forma">
+                    <label>Comentario</label>
+                    <textarea></textarea>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="form">
-        <p>Pongase en contacto con nosotros</p>
-        <form>
-            <div class="forma">
-                <label>Nombre y Apellido:</label>
-                <input>
-            </div>
-            <div class="forma">
-                <label>Email:</label>
-                <input>          
-            </div>
-            <div class="forma">
-                <label>Teléfono:</label>
-                <input>       
-            </div>
-            <div class="forma">
-                <label>Ciudad:</label>
-                <input>
-            </div>
-            <div class="forma">
-                <label>Razón de contacto:</label>
-                <input>
-            </div>
-            <div class="forma">
-                <label>Comentario</label>
-                <textarea></textarea>
-            </div>
-        </form>
-    </div>
-  </div>
 </div>
 
 

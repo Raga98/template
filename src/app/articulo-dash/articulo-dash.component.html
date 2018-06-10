@@ -1,0 +1,22 @@
+<form action="/my-handling-form-page" method="post">
+    <div class="forms">
+        <label  for="title">Titulo del Contenido</label>
+        <input [(ngModel)] = 'pubs.title' type="text" id="title" />
+    </div>
+    <div class="forms">
+      <label>Sub Titulo del contenido</label>
+      <input>
+    </div>
+    <div class="forms">
+      <label for="msg">Contenido en parrafos</label>
+      <textarea id="msg"></textarea>
+    </div>
+    <div class="button">
+        <button (click) = 'createPub(pubs)' type="submit">Publicar noticia en la página</button>
+        <button>Eliminar</button>
+        <button>Editar</button>
+        <button>Nuevo Parrafo</button>
+    </div>
+</form>
+
+

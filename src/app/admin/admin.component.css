@@ -1,66 +1,66 @@
-form {
-    /* Sólo para centrar el formulario a la página */
-    margin: 0 auto;
-    width: 400px;
-    /* Para ver el borde del formulario */
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
-    display: grid
+.menubtn {
+    font-size: 22px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: black;
+    font-size: 22px;
+    border: none;
+    background-color: transparent;
 }
-form div + div {
-    margin-top: 1em;
-}
-label {
-    /* Para asegurarse que todos los labels tienen el mismo tamaño y están alineados correctamente */
-    display: inline-block;
-    padding-bottom: 15px;
-}
-input, textarea {
-    /* Para asegurarse de que todos los campos de texto tienen las mismas propiedades de fuente
-       Por defecto, las areas de texto tienen una fuente con monospace */
-    font: 1em sans-serif;
-
-    /* Para darle el mismo tamaño a todos los campos de texto */
-    width: 300px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-
-    /* Para armonizar el look&feel del borde en los campos de texto */
-    border: 1px solid #999;
-}
-input:focus, textarea:focus {
-    /* Para dar un pequeño destaque en elementos activos*/
-    border-color: #000;
-}
-textarea {
-    /* Para alinear campos de texto multilínea con sus labels */
-    vertical-align: top;
-
-    /* Para dar suficiente espacio para escribir texto */
-    height: 5em;
-
-    /* Para permitir a los usuarios cambiar el tamaño de cualquier textarea verticalmente
-        No funciona en todos los navegadores */
-    resize: vertical;
-}
-.button {
-    /* Para posicionar los botones a la misma posición que los campos de texto */
-    padding-left: 90px; /* mismo tamaño a todos los elementos label */
+.menu-dash {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    grid-column-gap: 20px;
 }
 button {
-    /* Este margen extra representa aproximadamente el mismo espacio que el espacio
-       entre los labels y sus campos de texto */
-    margin-left: .5em;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: lightblue;
+    border: 1px solid black;
 }
 
-.forms {
-    display: grid;
-    grid-template-columns: 1fr
+
+
+.dropdown {
+    position: relative;
+    display: block;
+    border-radius: 5px
 }
-.forms label {
-    grid-template-columns: auto
+.dropdown-content {
+    position: absolute;
+    display: none;
+    /*background-color: rgba(157, 189, 216, 0.897);*/
+    background-color: #dcd4a9;
+    border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    text-align: left
 }
-.forms input {
-    grid-template-columns: auto
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+a {
+    font-size: 22px;
+    font-weight: 500;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+}
+a:hover {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    color: #eee;
 }

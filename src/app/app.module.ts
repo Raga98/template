@@ -11,8 +11,8 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from "angularfire2/auth";
-import {initializeApp, database} from 'firebase';
-import {FormsModule} from '@angular/forms';
+import { initializeApp, database } from 'firebase';
+import { FormsModule } from '@angular/forms';
 import { ConozcanosComponent } from './conozcanos/conozcanos.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { BibliotecaComponent } from './biblioteca/biblioteca.component';
@@ -29,20 +29,22 @@ import { BibliografiasComponent } from './biografias/biografias.component';
 import { GrafiasComponent } from './grafias/grafias.component';
 import { PubsService } from './services/pubs.service';
 
+import { ArticuloDashComponent } from './articulo-dash/articulo-dash.component';
+
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
+  { path: 'articulo-dash', component: ArticuloDashComponent },
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'conozcanos', component: ConozcanosComponent },
   { path: 'cursos', component: CursosComponent },
   { path: 'biblioteca', component: BibliotecaComponent },
   { path: 'articulos', component: ArticulosComponent },
-  { path: '', redirectTo: '/content', pathMatch: 'full' },
-  { path: '**', redirectTo: '/content', pathMatch: 'full' },
-
   { path: 'noticias', component: NoticiasComponent },
   { path: 'conferencias', component: ConferenciasComponent },
   { path: 'conferencistas', component: ConferencistasComponent },
+  { path: '', redirectTo: '/content', pathMatch: 'full' },
+  { path: '**', redirectTo: '/content', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -62,6 +64,7 @@ const appRoutes: Routes = [
     LibrosComponent,
     BibliografiasComponent,
     GrafiasComponent,
+    ArticuloDashComponent,
   ],
   imports: [
     RouterModule.forRoot(

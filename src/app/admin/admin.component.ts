@@ -45,6 +45,16 @@ authState = null;
     
   }
 
+
+  boton: number
+
+  boton1() {
+    this.boton = 1
+  }
+  descartar() {
+    this.boton = 0
+  }
+
 } 
 
 

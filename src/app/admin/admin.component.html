@@ -1,82 +1,33 @@
-<form action="/my-handling-form-page" method="post">
-    <div class="forms">
-        <label  for="title">Titular de la Noticia</label>
-        <input [(ngModel)] = 'pubs.title' type="text" id="title" />
+<div class="menu-dash">
+    <div>
+        <button class="menubtn">Inicio</button>
     </div>
-    <div class="forms">
-        <label for="mail">Dia de publicación</label>
-        <input id="date" type="date">
+    <div>
+        <button class="menubtn">Conozcanos</button>
     </div>
-    <div class="forms">
-        <label for="mail">Hora de publicación</label>
-        <input id="time" type="time">
+    <div>
+        <button class="menubtn">Cursos</button>
     </div>
-    <div class="forms">
-        <label for="msg">Corta reseña de la noticia</label>
-        <textarea id="msg"></textarea>
-        <!--<input [(ngModel)] = 'pubs.description' type="text" id="description" />-->
-    </div>
-    <div class="forms">
-        <label  for="msg">Noticia completa</label>
-        <!--<input [(ngModel)] = 'pubs.news' type="text" id="news" />-->
-        <textarea id="msg"></textarea>
-    </div>
-    <div class="button">
-        <button (click) = 'createPub(pubs)' type="submit">Publicar noticia en la página</button>
-    </div>
-</form>
-<div class="button" routerLink="/login">   
-    <button (click) = adminSignOut() type="submit"> LogOut</button>
-</div>
-
-
-<div>
-    <div class="dropdown">
-        <button class="menubtn">Crear</button>
-        <div class="dropdown-content">
-            <a href="#">Content</a>
-            <a routerLink="/articulos">Noticias</a>
-            <a href="#">Conferencias</a>
-            <a href="#">Conferencistas</a>
-        </div>  
-    </div>
-    <button>Eliminar</button>
-    <button>Editar</button>
-    <p>En caso de que le de click a contenido</p>
-    <div style="display: grid">
-        <div>
-        <label>Titulo</label>
-        <input>
-        <div>
-        </div>
-        <label>Sub Titulo</label>
-        <input>
-        <div>
-        </div>
-        <label>contenido</label>
-        <textarea></textarea>
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <p>conferencistas</p>
-    <div style="display: grid">
-        <div>
-        <label>drag picture</label>
-        <div style="height: 60px, width, 60px; border: 1px solid black">
-            mueva imagen
-        </div>
-        </div>
-        <div>
-        <label>Nombre de conferencista</label>
-        <input>
-        </div>
-        <div>
-        <label>Curriculum</label>
-        <textarea></textarea>
-        </div>
+    <div>
+        <button class="menubtn">Biblioteca</button>
     </div>
 </div>
 
+<div class="dropdown">
+    <button>Crear</button>
+    <div class="dropdown-content">
+        <a (click)="boton1()">contenido</a>
+        <a (click)="boton2()">articulos</a>
+        <a (click)="boton3()">conferencias</a>
+        <a (click)="boton4()">conferencistas</a>
+        <a (click)="boton5()">videos</a>
+        <a (click)="boton6()">libros</a>
+        <a (click)="boton7()">biografias</a>
+    </div>
+</div>
+<button (click)="descartar()">descartar</button>
+
+<div *ngIf = "boton === 1" >
+    <articulo-dash></articulo-dash>
+</div>
   
