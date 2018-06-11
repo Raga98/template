@@ -5,47 +5,13 @@
     <div>
         <button class="menubtn">Conozcanos</button>
     </div>
-    <div>
+    <div> 
         <button class="menubtn">Cursos</button>
     </div>
     <div>
         <button class="menubtn">Biblioteca</button>
     </div>
 </div>
-<!--Start Form-->
-<form action="/my-handling-form-page" method="post">
-    <div class="forms">
-        <label  for="title">Titular de la Noticia</label>
-        <input [(ngModel)] = "pubs.title" type="text" id="title" name = "title">
-    </div>
-
-    <div class="forms">
-        <label for="mail">Dia de publicación</label>
-        <input id="date" type="date">
-    </div>
-
-    <div class="forms">
-        <label for="mail">Hora de publicación</label>
-        <input id="time" type="time">
-    </div>
-
-    <div class="forms">
-        <label for="msg">Corta reseña de la noticia</label>
-        <textarea id="msg"></textarea>
-        <!--<input [(ngModel)] = 'pubs.description' type="text" id="description" />-->
-    </div>
-
-    <div class="forms">
-        <label  for="msg">Noticia completa</label>
-        <!--<input [(ngModel)] = 'pubs.news' type="text" id="news" />-->
-        <textarea id="msg"></textarea>
-    </div>
-
-    <div class="button">
-        <button (click) = "createPub(pubs)" type="submit">Publicar noticia en la página</button>
-    </div>
-</form>
-<!--End Form-->
 
 <div class="button" routerLink="/login">   
     <button (click) = adminSignOut() type="submit"> LogOut</button>
@@ -67,5 +33,20 @@
 
 <div *ngIf = "boton === 1" >
     <articulo-dash></articulo-dash>
+</div>
+<div *ngIf = "boton === 2" >
+    <contenido-dash></contenido-dash>
+</div>
+<div *ngIf = "boton === 3" >
+    <conferencias-dash></conferencias-dash>
+</div>
+<div *ngIf = "boton === 4" >
+    <conferencistas-dash></conferencistas-dash>
+</div>
+<div *ngIf = "boton === 5" >
+    <videos-dash></videos-dash>
+</div>
+<div>
+    
 </div>
   

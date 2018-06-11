@@ -1,11 +1,16 @@
-<form action="/my-handling-form-page" method="post">
+<form  action="/my-handling-form-page" method="post">
     <div class="forms">
-        <label  for="title">Titulo del Contenido</label>
-        <input [(ngModel)] = 'pubs.title' type="text" id="title" />
+        <label  for="title">Titulo del articulo</label>
+        <input [(ngModel)] = "pubs.title" type="text" id="title" name = "title" />
     </div>
     <div class="forms">
-      <label>Sub Titulo del contenido</label>
+      <label>Sub Titulo del articulo</label>
       <input>
+    </div>
+    <div class="forms">
+        <label for="msg">Corta reseña de la noticia</label>
+        <textarea id="msg"></textarea>
+        <!--<input [(ngModel)] = 'pubs.description' type="text" id="description" />-->
     </div>
     <div class="forms">
       <label for="msg">Contenido en parrafos</label>
