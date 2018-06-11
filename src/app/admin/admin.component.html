@@ -12,9 +12,35 @@
         <button class="menubtn">Biblioteca</button>
     </div>
 </div>
-
-<div class="button" routerLink="/login">   
-    <button (click) = adminSignOut() type="submit"> LogOut</button>
+<div *ngIf = "cont === 1">
+    <div *ngFor="let cont of contador">
+        <contenido-dash [contador]=cont></contenido-dash>
+    </div>
+    <button (click)="descartar()">descartar</button>
+</div>
+<div *ngIf = "art === 2">
+    <articulo-dash></articulo-dash>
+    <button (click)="descartar()">descartar</button>
+</div>
+<div *ngIf = "conf === 3">
+    <conferencias-dash></conferencias-dash>
+    <button (click)="descartar()">descartar</button>
+</div>
+<div *ngIf = "confe === 4">
+    <conferencistas-dash></conferencistas-dash>
+    <button (click)="descartar()">descartar</button>
+</div>
+<div *ngIf = "vid === 5">
+    <videos-dash></videos-dash>
+    <button (click)="descartar()">descartar</button>
+</div>
+<div *ngIf = "lib === 6">
+    <libros-dash></libros-dash>
+    <button (click)="descartar()">descartar</button>
+</div>
+<div *ngIf = "bio === 7">
+    <biografias-dash></biografias-dash>
+    <button (click)="descartar()">descartar</button>
 </div>
 
 <div class="dropdown">
@@ -29,6 +55,7 @@
         <a (click)="boton7()">biografias</a>
     </div>
 </div>
+<<<<<<< HEAD
 <button (click)="descartar()">descartar</button>
 
 <div *ngIf = "boton === 1" >
@@ -52,3 +79,8 @@
 </div>
 -->
   
+=======
+<div style="float: right;" class="button" routerLink="/login">   
+    <button (click) = adminSignOut() type="submit"> LogOut</button>
+</div>
+>>>>>>> 25d34e19afa15ac37a060ccf5a6a4af4519d2ec7

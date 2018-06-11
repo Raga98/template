@@ -31,9 +31,16 @@ import { PubsService } from './services/pubs.service';
 import { AuthGuardService } from './services/auth-guard.service';
 import { AdminService } from './services/admin.service';
 import { ArticuloDashComponent } from './articulo-dash/articulo-dash.component';
+import { ContenidoDashComponent } from './contenido-dash/contenido-dash.component';
+import { ConferenciasDashComponent } from './conferencias-dash/conferencias-dash.component';
+import { ConferencistasDashComponent } from './conferencistas-dash/conferencistas-dash.component';
+import { VideosDashComponent } from './videos-dash/videos-dash.component';
+import { LibrosDashComponent } from './libros-dash/libros-dash.component';
+import { BiografiasDashComponent } from './biografias-dash/biografias-dash.component';
 
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
+<<<<<<< HEAD
   { path: 'articulo-dash', component: ArticuloDashComponent },
   { path: 'login', component: LoginComponent },
   { path: 'admin', canActivate:[AuthGuardService],  component: AdminComponent },
@@ -41,9 +48,24 @@ const appRoutes: Routes = [
   { path: 'cursos', component: CursosComponent },
   { path: 'biblioteca', component: BibliotecaComponent },
   { path: 'articulos', component: ArticulosComponent },
+=======
+>>>>>>> 25d34e19afa15ac37a060ccf5a6a4af4519d2ec7
   { path: 'noticias', component: NoticiasComponent },
+  { path: 'articulos', component: ArticulosComponent },
   { path: 'conferencias', component: ConferenciasComponent },
   { path: 'conferencistas', component: ConferencistasComponent },
+  { path: 'conozcanos', component: ConozcanosComponent },
+  { path: 'cursos', component: CursosComponent },
+  { path: 'biblioteca', component: BibliotecaComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'articulo-dash', component: ArticuloDashComponent },
+  { path: 'contenido-dash', component: ContenidoDashComponent },
+  { path: 'conferencias-dash', component: ConferenciasDashComponent },
+  { path: 'conferencistas-dash', component: ConferencistasDashComponent },
+  { path: 'videos-dash', component: VideosDashComponent },
+  { path: 'libros-dash', component: LibrosDashComponent },
+  { path: 'biografias-dash', component: BiografiasDashComponent },
   { path: '', redirectTo: '/content', pathMatch: 'full' },
   { path: '**', redirectTo: '/content', pathMatch: 'full' },
 ];
@@ -66,6 +88,12 @@ const appRoutes: Routes = [
     BibliografiasComponent,
     GrafiasComponent,
     ArticuloDashComponent,
+    ContenidoDashComponent,
+    ConferenciasDashComponent,
+    ConferencistasDashComponent,
+    VideosDashComponent,
+    LibrosDashComponent,
+    BiografiasDashComponent,
   ],
   imports: [
     RouterModule.forRoot(
