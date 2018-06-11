@@ -28,14 +28,15 @@ import { LibrosComponent } from './libros/libros.component';
 import { BibliografiasComponent } from './biografias/biografias.component';
 import { GrafiasComponent } from './grafias/grafias.component';
 import { PubsService } from './services/pubs.service';
-
+import { AuthGuardService } from './services/auth-guard.service';
+import { AdminService } from './services/admin.service';
 import { ArticuloDashComponent } from './articulo-dash/articulo-dash.component';
 
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
   { path: 'articulo-dash', component: ArticuloDashComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'admin', component: AdminComponent },
+  { path: 'admin', canActivate:[AuthGuardService],  component: AdminComponent },
   { path: 'conozcanos', component: ConozcanosComponent },
   { path: 'cursos', component: CursosComponent },
   { path: 'biblioteca', component: BibliotecaComponent },
@@ -79,7 +80,7 @@ const appRoutes: Routes = [
     HttpModule,
     AngularFireAuthModule
   ],
-  providers: [LoginService, PubsService],
+  providers: [LoginService, PubsService, AuthGuardService, AdminService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

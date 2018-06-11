@@ -18,19 +18,13 @@ export class LoginService {
        if (result.credential){
         var user = result.user;
         console.log(result);
-      }
-      if(!user.uid){
-      this.router.navigate(['/content']);
     }
-    else{
-      this.router.navigate(['/content']);
-    }
-      if (user.email == "oscar.272731@gmail.com" || user.email == "ragajeremy@gmail.com"){
-        this.router.navigate(['/admin']); //WORKS..
-      } 
-    }); 
+  
+     }); 
+  }; 
    
-  }
+
+  
 
   gotoConozcanos(){
     this.router.navigate(['/conozcanos']);
