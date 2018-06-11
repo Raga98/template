@@ -15,11 +15,16 @@ export class ArticuloDashComponent implements OnInit {
   pubs = {} as Pubs;
   authState = null;
 
+  parr: boolean
 
   constructor(public router: Router, private pubsService: PubsService) { }
 
   ngOnInit() {
   
+  }
+
+  parrafo() {
+    this.parr = true;
   }
 
   createPub() {

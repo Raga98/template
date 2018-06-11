@@ -1,11 +1,8 @@
 <form  action="/my-handling-form-page" method="post">
     <div class="forms">
+        <button>Subir imagen del articulo</button>
         <label  for="title">Titulo del articulo</label>
         <input [(ngModel)] = "pubs.title" type="text" id="title" name = "title" />
-    </div>
-    <div class="forms">
-      <label>Sub Titulo del articulo</label>
-      <input>
     </div>
     <div class="forms">
         <label for="msg">Corta reseña de la noticia</label>
@@ -13,15 +10,28 @@
         <!--<input [(ngModel)] = 'pubs.description' type="text" id="description" />-->
     </div>
     <div class="forms">
-      <label for="msg">Contenido en parrafos</label>
-      <textarea id="msg"></textarea>
+        <label>Sub Titulo del articulo</label>
+        <input>
+    </div>
+    <div class="forms">
+        <label for="msg">Contenido en parrafos</label>
+        <textarea id="msg"></textarea>
+    </div>
+    <!-- Necesario hacer que aparezcan los parrafos y subtitulos
+         con una especie de ngFor para que se generen cada vez que le de click al boton-->
+    <div *ngIf = "parr === true" class="forms">
+        <label for="msg">Contenido en parrafos</label>
+        <textarea id="msg"></textarea>
     </div>
     <div class="button">
-        <button (click) = 'createPub(pubs)' type="submit">Publicar noticia en la página</button>
-        <button>Eliminar</button>
-        <button>Editar</button>
-        <button>Nuevo Parrafo</button>
+        <button (click)='parrafo()'>Nuevo Parrafo</button>
+        <button (click)='createPub(pubs)' type="submit">Publicar noticia en la página</button>
     </div>
 </form>
+<div>
+    <!-- Y aqui iria el Data binding para que vea como se crea el articulo en tiempo real-->
+    <img>
+    <h2></h2>
+</div>
 
 

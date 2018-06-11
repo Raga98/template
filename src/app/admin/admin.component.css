@@ -25,9 +25,9 @@ button {
     border: 1px solid black;
 }
 .dropdown {
-    position: relative;
-    display: block;
-    border-radius: 5px
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 60px;
 }
 .dropdown-content {
     position: absolute;
