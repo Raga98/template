@@ -12,7 +12,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from "angularfire2/auth";
 import { initializeApp, database } from 'firebase';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { ConozcanosComponent } from './conozcanos/conozcanos.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { BibliotecaComponent } from './biblioteca/biblioteca.component';
@@ -37,19 +38,14 @@ import { ConferencistasDashComponent } from './conferencistas-dash/conferencista
 import { VideosDashComponent } from './videos-dash/videos-dash.component';
 import { LibrosDashComponent } from './libros-dash/libros-dash.component';
 import { BiografiasDashComponent } from './biografias-dash/biografias-dash.component';
+//AngularMaterial
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import { MatDialogModule, MatDialogRef } from '@angular/material';
+import { EditorModule } from '@tinymce/tinymce-angular';//Editor WYSIWYG
 
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
-<<<<<<< HEAD
-  { path: 'articulo-dash', component: ArticuloDashComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'admin', canActivate:[AuthGuardService],  component: AdminComponent },
-  { path: 'conozcanos', component: ConozcanosComponent },
-  { path: 'cursos', component: CursosComponent },
-  { path: 'biblioteca', component: BibliotecaComponent },
-  { path: 'articulos', component: ArticulosComponent },
-=======
->>>>>>> 25d34e19afa15ac37a060ccf5a6a4af4519d2ec7
   { path: 'noticias', component: NoticiasComponent },
   { path: 'articulos', component: ArticulosComponent },
   { path: 'conferencias', component: ConferenciasComponent },
@@ -106,7 +102,11 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule,
     HttpModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    EditorModule,
+    ReactiveFormsModule
   ],
   providers: [LoginService, PubsService, AuthGuardService, AdminService],
   bootstrap: [AppComponent],

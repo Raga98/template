@@ -1,37 +1,47 @@
-<form  action="/my-handling-form-page" method="post">
+<!--<form  action="/my-handling-form-page" method="post">
     <div class="forms">
         <button>Subir imagen del articulo</button>
-        <label  for="title">Titulo del articulo</label>
-        <input [(ngModel)] = "pubs.title" type="text" id="title" name = "title" />
+        <mat-form-field>
+            <input matInput [(ngModel)]="pubs.title" placeholder="Titulo del articulo" name = "title" />
+        </mat-form-field>
     </div>
     <div class="forms">
-        <label for="msg">Corta reseña de la noticia</label>
-        <textarea id="msg"></textarea>
-        <!--<input [(ngModel)] = 'pubs.description' type="text" id="description" />-->
+        <mat-form-field>
+            <textarea matInput id="msg" placeholder="Corta reseña de la noticia"></textarea>
+        </mat-form-field>
+        <input [(ngModel)] = 'pubs.description' type="text" id="description" />
     </div>
     <div class="forms">
-        <label>Sub Titulo del articulo</label>
-        <input>
+        <mat-form-field>
+            <input matInput [(ngModel)]="pubs.title" placeholder="Sub Titulo del articulo" />
+        </mat-form-field>
     </div>
     <div class="forms">
-        <label for="msg">Contenido en parrafos</label>
-        <textarea id="msg"></textarea>
+        <mat-form-field>
+            <textarea matInput id="msg" placeholder="Contenido en parrafos"></textarea>
+        </mat-form-field>
     </div>
-    <!-- Necesario hacer que aparezcan los parrafos y subtitulos
-         con una especie de ngFor para que se generen cada vez que le de click al boton-->
-    <div *ngIf = "parr === true" class="forms">
-        <label for="msg">Contenido en parrafos</label>
-        <textarea id="msg"></textarea>
-    </div>
+    <editor apiKey="test" [init]="{plugins: 'link'}"></editor>
     <div class="button">
-        <button (click)='parrafo()'>Nuevo Parrafo</button>
         <button (click)='createPub(pubs)' type="submit">Publicar noticia en la página</button>
     </div>
 </form>
+-->
 <div>
     <!-- Y aqui iria el Data binding para que vea como se crea el articulo en tiempo real-->
-    <img>
-    <h2></h2>
 </div>
-
+<form><!--[formGroup]="form" (ngSubmit)="submit(form)"-->
+    <h1 mat-dialog-title>Agregue Contenido</h1>
+    <mat-dialog-content>
+        <mat-form-field>
+            <input matInput placeholder="Titulo del contenido">
+        </mat-form-field>
+        <editor apiKey="test" [init]="{plugins: 'link'}"></editor>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button type="submit" (click)="guardar()"><mat-icon>save</mat-icon>Guardar</button>
+        <button mat-button type="button" mat-dialog-close>Cancel</button>
+    </mat-dialog-actions>
+</form>
+  
 

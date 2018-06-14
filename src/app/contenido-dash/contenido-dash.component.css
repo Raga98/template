@@ -1,0 +1,51 @@
+button {
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+    background-color: seashell;
+    border: 1px solid black;
+}
+
+form {
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    display: grid;
+    background-color: wheat;
+    font-size: 15px;
+}
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    /* Para asegurarse que todos los labels tienen el mismo tamaño y están alineados correctamente */
+    display: inline-block;
+    padding-bottom: 15px;
+}
+textarea {
+    /* Para alinear campos de texto multilínea con sus labels */
+    vertical-align: top;
+
+    /* Para dar suficiente espacio para escribir texto */
+    height: 5em;
+
+    /* Para permitir a los usuarios cambiar el tamaño de cualquier textarea verticalmente
+        No funciona en todos los navegadores */
+    resize: vertical;
+}
+.forms {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.forms label {
+    grid-template-columns: auto
+}
+.forms input {
+    grid-template-columns: auto;
+}
+
+

@@ -1,17 +1,19 @@
 <div class="menu-dash">
     <div>
-        <button class="menubtn">Inicio</button>
+        <button class="menubtn" (click)="inicio()">Inicio</button>
     </div>
     <div>
-        <button class="menubtn">Conozcanos</button>
+        <button class="menubtn" (click)="conozcanos()">Conozcanos</button>
     </div>
     <div> 
-        <button class="menubtn">Cursos</button>
+        <button class="menubtn" (click)="cursos()">Cursos</button>
     </div>
     <div>
-        <button class="menubtn">Biblioteca</button>
+        <button class="menubtn" (click)="bibliotecas()">Biblioteca</button>
     </div>
 </div>
+
+
 <div *ngIf = "cont === 1">
     <div *ngFor="let cont of contador">
         <contenido-dash [contador]=cont></contenido-dash>
@@ -30,6 +32,7 @@
     <conferencistas-dash></conferencistas-dash>
     <button (click)="descartar()">descartar</button>
 </div>
+<!--
 <div *ngIf = "vid === 5">
     <videos-dash></videos-dash>
     <button (click)="descartar()">descartar</button>
@@ -42,45 +45,23 @@
     <biografias-dash></biografias-dash>
     <button (click)="descartar()">descartar</button>
 </div>
+-->
 
 <div class="dropdown">
     <button>Crear</button>
     <div class="dropdown-content">
-        <a (click)="boton1()">contenido</a>
-        <a (click)="boton2()">articulos</a>
+        <a (click)="openContentDialog()">contenido</a>
+        <a (click)="openArticuloDialog()">articulos</a>
         <a (click)="boton3()">conferencias</a>
         <a (click)="boton4()">conferencistas</a>
+        <!--    
         <a (click)="boton5()">videos</a>
         <a (click)="boton6()">libros</a>
-        <a (click)="boton7()">biografias</a>
+        <a (click)="boton7()">biografias</a> 
+        -->
     </div>
 </div>
-<<<<<<< HEAD
-<button (click)="descartar()">descartar</button>
-
-<div *ngIf = "boton === 1" >
-    <articulo-dash></articulo-dash>
-</div>
-<!--
-<div *ngIf = "boton === 2" >
-    <contenido-dash></contenido-dash>
-</div>
-<div *ngIf = "boton === 3" >
-    <conferencias-dash></conferencias-dash>
-</div>
-<div *ngIf = "boton === 4" >
-    <conferencistas-dash></conferencistas-dash>
-</div>
-<div *ngIf = "boton === 5" >
-    <videos-dash></videos-dash>
-</div>
-<div>
-    
-</div>
--->
-  
-=======
 <div style="float: right;" class="button" routerLink="/login">   
     <button (click) = adminSignOut() type="submit"> LogOut</button>
 </div>
->>>>>>> 25d34e19afa15ac37a060ccf5a6a4af4519d2ec7
+

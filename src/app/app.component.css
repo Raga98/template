@@ -34,14 +34,14 @@
 }
 form {
     display: grid;
-    grid-row-gap: 10px;
+    font-size: 12px;
 }
 label {
     font-size: 17px;
 }
 .forma {
     display: grid;
-    grid-template-columns: 140px auto;
+    grid-template-columns: 200px auto;
 }
 
 /*Propiedad del sidemenu mientras esta abierto en mayores pantallas*/
