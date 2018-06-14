@@ -1,13 +1,13 @@
-<form><!--[formGroup]="form" (ngSubmit)="submit(form)"-->
+<form [formGroup]="form" novalidate>
   <h1 mat-dialog-title>Agregue Contenido</h1>
   <mat-dialog-content>
       <mat-form-field>
-        <input matInput placeholder="Titulo del contenido">
+        <input matInput placeholder="Titulo del contenido"  [(ngModel)]="pubs.title" formControlName ="title" name = "title" >
       </mat-form-field>
       <editor apiKey="test" [init]="{plugins: 'link'}"></editor>
   </mat-dialog-content>
   <mat-dialog-actions>
-    <button mat-button type="submit" (click)="guardar()"><mat-icon>save</mat-icon>Guardar</button>
+    <button mat-button (click)="guardar(pubs)"><mat-icon>save</mat-icon>Guardar</button>
     <button mat-button type="button" mat-dialog-close>Cancel</button>
   </mat-dialog-actions>
 </form>

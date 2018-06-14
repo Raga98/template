@@ -13,17 +13,18 @@
     </div>
 </div>
 
-
-<div *ngIf = "cont === 1">
-    <div *ngFor="let cont of contador">
-        <contenido-dash [contador]=cont></contenido-dash>
+<div *ngFor="let pub of pubs">
+    <div>
+        <h2>Titulo: {{pub.title}}</h2>
+        <div>
+                        
+        </div>
     </div>
-    <button (click)="descartar()">descartar</button>
 </div>
-<div *ngIf = "art === 2">
-    <articulo-dash></articulo-dash>
-    <button (click)="descartar()">descartar</button>
+<div >
+    <noticias></noticias>
 </div>
+<!--
 <div *ngIf = "conf === 3">
     <conferencias-dash></conferencias-dash>
     <button (click)="descartar()">descartar</button>
@@ -32,7 +33,6 @@
     <conferencistas-dash></conferencistas-dash>
     <button (click)="descartar()">descartar</button>
 </div>
-<!--
 <div *ngIf = "vid === 5">
     <videos-dash></videos-dash>
     <button (click)="descartar()">descartar</button>

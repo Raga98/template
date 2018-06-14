@@ -1,41 +1,16 @@
-<!--<form  action="/my-handling-form-page" method="post">
-    <div class="forms">
-        <button>Subir imagen del articulo</button>
+<form>
+    <h1 mat-dialog-title>Agregue contenido del articulo</h1>
+    <mat-dialog-content style="display: grid">
         <mat-form-field>
-            <input matInput [(ngModel)]="pubs.title" placeholder="Titulo del articulo" name = "title" />
+            <input matInput placeholder="Titulo del articulo">
         </mat-form-field>
-    </div>
-    <div class="forms">
         <mat-form-field>
-            <textarea matInput id="msg" placeholder="Corta reseña de la noticia"></textarea>
+            <textarea matInput placeholder="Breve descripción del articulo"></textarea>
         </mat-form-field>
-        <input [(ngModel)] = 'pubs.description' type="text" id="description" />
-    </div>
-    <div class="forms">
         <mat-form-field>
-            <input matInput [(ngModel)]="pubs.title" placeholder="Sub Titulo del articulo" />
+            <input matInput placeholder="Autor del articulo">
         </mat-form-field>
-    </div>
-    <div class="forms">
-        <mat-form-field>
-            <textarea matInput id="msg" placeholder="Contenido en parrafos"></textarea>
-        </mat-form-field>
-    </div>
-    <editor apiKey="test" [init]="{plugins: 'link'}"></editor>
-    <div class="button">
-        <button (click)='createPub(pubs)' type="submit">Publicar noticia en la página</button>
-    </div>
-</form>
--->
-<div>
-    <!-- Y aqui iria el Data binding para que vea como se crea el articulo en tiempo real-->
-</div>
-<form><!--[formGroup]="form" (ngSubmit)="submit(form)"-->
-    <h1 mat-dialog-title>Agregue Contenido</h1>
-    <mat-dialog-content>
-        <mat-form-field>
-            <input matInput placeholder="Titulo del contenido">
-        </mat-form-field>
+        <label>Contenido del articulo</label>
         <editor apiKey="test" [init]="{plugins: 'link'}"></editor>
     </mat-dialog-content>
     <mat-dialog-actions>

@@ -6,7 +6,8 @@ import { ContenidoDashComponent } from '../contenido-dash/contenido-dash.compone
 import { ArticuloDashComponent } from '../articulo-dash/articulo-dash.component'
 import { MatDialogRef, MatDialog, MAT_DIALOG_DATA } from '@angular/material';
 //import { MaterialModule } from '../app.module';
-
+import { PubsService } from '../services/pubs.service'; 
+import { Pubs } from '../models/pubs';
 
 @Component({
   selector: 'app-admin',
@@ -17,6 +18,9 @@ import { MatDialogRef, MatDialog, MAT_DIALOG_DATA } from '@angular/material';
 export class AdminComponent implements OnInit {
 
   ContenidoDialogRef: MatDialogRef<ContenidoDashComponent>;
+  pub =  {} as Pubs;
+  pubs: Pubs[];
+  guardado: boolean;
 
   openContentDialog(): void {
     let dialogRef = this.dialog.open(ContenidoDashComponent, {
@@ -34,9 +38,12 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  constructor(private afAuth: AngularFireAuth, public router: Router, public dialog: MatDialog) { }
+  constructor( private afAuth: AngularFireAuth, public router: Router, public dialog: MatDialog, private pubsService: PubsService) { }
 
   ngOnInit(){
+    return this.pubsService.getPubs().subscribe(pubs => {
+      this.pubs = pubs;
+    })
   }
 
   adminSignOut(){

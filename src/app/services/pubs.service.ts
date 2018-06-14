@@ -29,7 +29,7 @@ export class PubsService {
      return this.pub$;
     }
   
-
+  
   addPub(pubs: Pubs){
     this.pubsCollection.add(pubs).then( docRef => {
       let docId = this.afs.doc(`pubs/${docRef.id}`);
