@@ -1,52 +1,58 @@
 <div class="menu-dash">
     <div>
-        <button class="menubtn" (click)="inicio()">Inicio</button>
+        <button mat-button class="menubtn" (click)="inicio()">Inicio</button>
     </div>
     <div>
-        <button class="menubtn" (click)="conozcanos()">Conozcanos</button>
+        <button mat-button class="menubtn" (click)="conozcanos()">Conozcanos</button>
     </div>
     <div> 
-        <button class="menubtn" (click)="cursos()">Cursos</button>
+        <button mat-button class="menubtn" (click)="cursos()">Cursos</button>
     </div>
     <div>
-        <button class="menubtn" (click)="bibliotecas()">Biblioteca</button>
+        <button mat-button class="menubtn" (click)="biblioteca()">Biblioteca</button>
     </div>
 </div>
-
-<div *ngFor="let pub of pubs">
-    <div>
-        <h2>Titulo: {{pub.title}}</h2>
+<div *ngIf = "botones === 1">
+    <!--Contenido general de inicio-->
+    <div *ngFor="let pub of pubs">
+        <h2>
+            {{pub.title}}
+        </h2>
         <div>
-                        
+            Aqui va el contenido del WYSIWYG          
+        </div>
+        <div>
+            <button style="padding: 3px;"><i class="material-icons">delete</i></button>
+            <button style="padding: 3px"><i class="material-icons">create</i></button>
+        </div>
+    </div>
+    <div class="noticias">
+        <div class="articulos">
+            <!--Contenido de noticias-->
+            <img src="../assets/imagen9.png" border="1" alt="ejemplo de un texto alternativo" width="100%" height="200">
+            <h3>
+                Titulo del articulo
+            </h3>
+            <h4>
+                Pequeña descripción del artículo para llamar la atención del usuario
+            </h4>
+            <p>
+                Fecha del articulo<br>
+                Autor del articulo
+            </p>
+            <button routerLink="/articulos">Seguir leyendo</button>
         </div>
     </div>
 </div>
-<div >
-    <noticias></noticias>
+<div *ngIf = "botones === 2">
+    Contenido de conozcanos
 </div>
-<!--
-<div *ngIf = "conf === 3">
-    <conferencias-dash></conferencias-dash>
-    <button (click)="descartar()">descartar</button>
+<div *ngIf = "botones === 3">
+    Contenido de cursos
 </div>
-<div *ngIf = "confe === 4">
-    <conferencistas-dash></conferencistas-dash>
-    <button (click)="descartar()">descartar</button>
+<div *ngIf = "botones === 4">
+    Contenido de biblioteca
 </div>
-<div *ngIf = "vid === 5">
-    <videos-dash></videos-dash>
-    <button (click)="descartar()">descartar</button>
-</div>
-<div *ngIf = "lib === 6">
-    <libros-dash></libros-dash>
-    <button (click)="descartar()">descartar</button>
-</div>
-<div *ngIf = "bio === 7">
-    <biografias-dash></biografias-dash>
-    <button (click)="descartar()">descartar</button>
-</div>
--->
-
 <div class="dropdown">
     <button>Crear</button>
     <div class="dropdown-content">

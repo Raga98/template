@@ -43,8 +43,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { MatDialogModule, MatDialogRef } from '@angular/material';
 import { EditorModule } from '@tinymce/tinymce-angular';//Editor WYSIWYG
+import { InicioComponent } from './inicio/inicio.component';
 
 const appRoutes: Routes = [
+  { path: 'inicio', component: InicioComponent },
   { path: 'content', component: ContentComponent },
   { path: 'noticias', component: NoticiasComponent },
   { path: 'articulos', component: ArticulosComponent },
@@ -62,8 +64,8 @@ const appRoutes: Routes = [
   { path: 'videos-dash', component: VideosDashComponent },
   { path: 'libros-dash', component: LibrosDashComponent },
   { path: 'biografias-dash', component: BiografiasDashComponent },
-  { path: '', redirectTo: '/content', pathMatch: 'full' },
-  { path: '**', redirectTo: '/content', pathMatch: 'full' },
+  { path: '', redirectTo: '/inicio', pathMatch: 'full' },
+  { path: '**', redirectTo: '/inicio', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -90,6 +92,7 @@ const appRoutes: Routes = [
     VideosDashComponent,
     LibrosDashComponent,
     BiografiasDashComponent,
+    InicioComponent,
   ],
   imports: [
     RouterModule.forRoot(

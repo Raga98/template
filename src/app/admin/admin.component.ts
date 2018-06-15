@@ -38,6 +38,20 @@ export class AdminComponent implements OnInit {
     });
   }
 
+  botones = 1;
+  inicio() {
+    this.botones = 1
+  }
+  conozcanos() {
+    this.botones = 2
+  }
+  cursos() {
+    this.botones = 3
+  }
+  biblioteca() {
+    this.botones = 4
+  }
+
   constructor( private afAuth: AngularFireAuth, public router: Router, public dialog: MatDialog, private pubsService: PubsService) { }
 
   ngOnInit(){

@@ -18,9 +18,9 @@ button {
     cursor: pointer;
     text-align: center;
     margin: auto;
+    padding: 5px;
     border: none;
     border-radius: 5px;
-    padding: 10px;
     background-color: lightblue;
     border: 1px solid black;
 }
@@ -61,3 +61,77 @@ a:hover {
     border-top: 1px solid black;
     color: #eee;
 }
+.edicion {
+    position: relative;
+}
+
+
+/*Estilos de las noticias*/
+.noticias {
+    display: grid;
+    grid-column-gap: 35px;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr))
+}
+.h2 {
+    grid-column: 1fr
+}
+p {
+    font-size: 13px;
+    margin: 0;
+}
+.articulos {
+    margin: 10px 0px;
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f5f3f39e;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.articulos button {
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: lightblue;
+}
+.articulos button:hover {
+    background-color: rgb(199, 228, 238);
+}
+.btn {
+    width: 50%;
+    margin: 0 auto;
+}
+.contanier {
+    margin: 0 auto;
+}
+/*
+@media (min-width: 851px) and (max-width: 1230px) {
+    .noticias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    h2 {
+        grid-column: span 2;
+    }
+}
+@media (min-width: 1231px) and (max-width: 1460px) {
+    .noticias {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    h2 {
+        grid-column: span 3;
+    }
+}
+@media (min-width: 1461px) {
+    .noticias {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    h2 {
+        grid-column: span 4;
+    }
+}*/
+

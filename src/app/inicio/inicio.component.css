@@ -1,0 +1,11 @@
+/*CSS de la página content*/
+.container {
+    display: grid;
+    grid-gap: 45px;
+}
+.container div {
+    text-align: justify;
+    font-family:  "Montserrat", sans-serif;
+    letter-spacing: 1px;
+}
+
