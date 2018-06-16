@@ -22,8 +22,8 @@
             Aqui va el contenido del WYSIWYG          
         </div>
         <div>
-            <button style="padding: 3px;"><i class="material-icons">delete</i></button>
-            <button style="padding: 3px"><i class="material-icons">create</i></button>
+            <button style="padding: 3px; background-color: indianred"><i class="material-icons">delete</i></button>
+            <button style="padding: 3px; background-color: darkseagreen"><i class="material-icons">create</i></button>
         </div>
     </div>
     <div class="noticias">
@@ -54,7 +54,7 @@
     Contenido de biblioteca
 </div>
 <div class="dropdown">
-    <button>Crear</button>
+    <button ><i class="material-icons">add</i></button>
     <div class="dropdown-content">
         <a (click)="openContentDialog()">contenido</a>
         <a (click)="openArticuloDialog()">articulos</a>
@@ -67,7 +67,7 @@
         -->
     </div>
 </div>
-<div style="float: right;" class="button" routerLink="/login">   
-    <button (click) = adminSignOut() type="submit"> LogOut</button>
+<div style="float: right" class="button" routerLink="/login">   
+    <button (click) = adminSignOut() type="submit" style="background-color: darkgray"><i class="material-icons">skip_previous</i></button>
 </div>
 
