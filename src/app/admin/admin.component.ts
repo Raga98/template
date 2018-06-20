@@ -65,6 +65,10 @@ export class AdminComponent implements OnInit {
       this.router.navigate(['/content']);
     });
   }
+
+  delete(pubs: Pubs){
+   this.pubsService.deletePub(pubs);
+  } 
 } 
 
 
