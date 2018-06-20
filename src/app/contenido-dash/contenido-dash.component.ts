@@ -21,6 +21,7 @@ export class ContenidoDashComponent implements OnInit {
     this.form = this.formsBuilder.group({
       //ID: [],
       title: ['', Validators.required],
+      news: ['', Validators.required]
     });
   }
 
@@ -31,5 +32,6 @@ export class ContenidoDashComponent implements OnInit {
   }
 
 get title() {return this.form.get('title');}
+get news() {return this.form.get('news');}
 
 }

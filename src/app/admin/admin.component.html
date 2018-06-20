@@ -18,9 +18,12 @@
         <h2>
             {{pub.title}}
         </h2>
-        <div>
-            Aqui va el contenido del WYSIWYG          
+
+        <div [innerHtml] = "pub.news">
+            {{pub.news}}
         </div>
+
+        
         <div>
             <button style="padding: 3px; background-color: indianred"><i class="material-icons"  (click) = "delete(pub)">delete</i></button>
             <button style="padding: 3px; background-color: darkseagreen"><i class="material-icons">create</i></button>
