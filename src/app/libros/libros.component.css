@@ -1,0 +1,10 @@
+.biblioteca {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.libros {
+    margin: 0 auto;
+    cursor: pointer
+}

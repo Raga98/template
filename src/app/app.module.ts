@@ -26,7 +26,8 @@ import { ConferencistasComponent } from './conferencistas/conferencistas.compone
 import { ConferenciasComponent } from './conferencias/conferencias.component';
 import { VideosComponent } from './videos/videos.component';
 import { LibrosComponent } from './libros/libros.component';
-import { BibliografiasComponent } from './biografias/biografias.component';
+import { LibroComponent } from './libro/libro.component';
+import { BiografiasComponent } from './biografias/biografias.component';
 import { GrafiasComponent } from './grafias/grafias.component';
 import { PubsService } from './services/pubs.service';
 import { AuthGuardService } from './services/auth-guard.service';
@@ -44,7 +45,6 @@ import { MaterialModule } from './material.module';
 import { MatDialogModule, MatDialogRef } from '@angular/material';
 import { EditorModule } from '@tinymce/tinymce-angular';//Editor WYSIWYG
 import { InicioComponent } from './inicio/inicio.component';
-import { LibroComponent } from './libro/libro.component';
 
 const appRoutes: Routes = [
   { path: 'inicio', component: InicioComponent },
@@ -55,7 +55,11 @@ const appRoutes: Routes = [
   { path: 'conferencistas', component: ConferencistasComponent },
   { path: 'conozcanos', component: ConozcanosComponent },
   { path: 'cursos', component: CursosComponent },
+  { path: 'libros', component: LibrosComponent },
+  { path: 'libro', component: LibroComponent },
   { path: 'biblioteca', component: BibliotecaComponent },
+  { path: 'biografias', component: BiografiasComponent },
+  { path: 'grafias', component: GrafiasComponent },
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'articulo-dash', component: ArticuloDashComponent },
@@ -84,7 +88,7 @@ const appRoutes: Routes = [
     ConferenciasComponent,
     VideosComponent,
     LibrosComponent,
-    BibliografiasComponent,
+    BiografiasComponent,
     GrafiasComponent,
     ArticuloDashComponent,
     ContenidoDashComponent,

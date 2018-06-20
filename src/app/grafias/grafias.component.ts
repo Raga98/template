@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-grafias',
+  selector: 'grafias',
   templateUrl: './grafias.component.html',
   styleUrls: ['./grafias.component.css']
 })
