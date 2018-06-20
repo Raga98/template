@@ -4,7 +4,7 @@
       <mat-form-field>
         <input matInput placeholder="Titulo del contenido"  [(ngModel)]="pubs.title" formControlName ="title" name = "title" >
       </mat-form-field>
-      <editor apiKey="test" [init]="{plugins: 'link'}"></editor>
+      <editor [(ngModel)] = "pubs.news" name = "news" formControlName ="news" ></editor>
   </mat-dialog-content>
   <mat-dialog-actions>
     <button mat-button (click)="guardar(pubs)"><mat-icon>save</mat-icon>Guardar</button>
