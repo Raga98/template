@@ -4,9 +4,8 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    /*background-image: url("/assets/roses.jpg"); */
+    background-image: url("/assets/background/uni2.jpeg");
     background-repeat: repeat;
-    background-color: rgba(173, 206, 223)
 }
 h2 {
     text-align: center;
