@@ -3,6 +3,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { Router, CanActivate, CanActivateChild} from '@angular/router';
 
 import { ContenidoDashComponent } from '../contenido-dash/contenido-dash.component';
+import { EditComponent } from '../edit/edit.component';
 import { ArticuloDashComponent } from '../articulo-dash/articulo-dash.component'
 import { MatDialogRef, MatDialog, MAT_DIALOG_DATA } from '@angular/material';
 //import { MaterialModule } from '../app.module';
@@ -18,6 +19,7 @@ import { Pubs } from '../models/pubs';
 export class AdminComponent implements OnInit {
 
   ContenidoDialogRef: MatDialogRef<ContenidoDashComponent>;
+  EditDialogRef: MatDialogRef<EditComponent>;
   pub =  {} as Pubs;
   pubs: Pubs[];
   guardado: boolean;
@@ -29,6 +31,17 @@ export class AdminComponent implements OnInit {
     });
   }
 
+  openEditDialog(pubId: string, pub: Pubs): void {
+    let dialogRef = this.dialog.open(EditComponent, {
+      id: pubId,
+      hasBackdrop: false,
+      width: '80%',
+    });
+  }
+
+ 
+  
+  
   ArticuloDialogRef: MatDialogRef<ArticuloDashComponent>;
 
   openArticuloDialog(): void {

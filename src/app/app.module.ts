@@ -45,6 +45,7 @@ import { MaterialModule } from './material.module';
 import { MatDialogModule, MatDialogRef } from '@angular/material';
 import { EditorModule } from '@tinymce/tinymce-angular';//Editor WYSIWYG
 import { InicioComponent } from './inicio/inicio.component';
+import { EditComponent } from './edit/edit.component';
 
 const appRoutes: Routes = [
   { path: 'inicio', component: InicioComponent },
@@ -66,6 +67,7 @@ const appRoutes: Routes = [
   { path: 'contenido-dash', component: ContenidoDashComponent },
   { path: 'conferencias-dash', component: ConferenciasDashComponent },
   { path: 'conferencistas-dash', component: ConferencistasDashComponent },
+  { path: 'edit', component: EditComponent },
   { path: 'videos-dash', component: VideosDashComponent },
   { path: 'libros-dash', component: LibrosDashComponent },
   { path: 'biografias-dash', component: BiografiasDashComponent },
@@ -99,6 +101,7 @@ const appRoutes: Routes = [
     BiografiasDashComponent,
     InicioComponent,
     LibroComponent,
+    EditComponent,
   ],
   imports: [
     RouterModule.forRoot(

@@ -34,11 +34,17 @@ export class PubsService {
     this.pubsCollection.add(pubs).then( docRef => {
       let docId = this.afs.doc(`pubs/${docRef.id}`);
       docId.update({
+        id: docRef.id,
         date: new Date
       })
     });
     
     
+  }
+
+  editPub(pubId:string, pubs: Pubs){
+    let docRef = this.afs.doc(`pubs/${pubId}`);
+    docRef.update(pubs);
   }
 
   deletePub(pubs: Pubs){
