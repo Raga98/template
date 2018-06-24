@@ -19,7 +19,8 @@
     border-radius: 25px;
 }
 .footer {
-    background-color: silver;
+    background-color: #212121;
+    color: tan;
     /*rgba(51, 138, 158) */
     margin-bottom: 0px;
     display: grid;
@@ -68,7 +69,7 @@ label {
 
 .nav-header {
     grid-column: span 2;
-    color: rgb(39, 27, 27);
+    color: #212121;
 
 }
 .nav-title {
