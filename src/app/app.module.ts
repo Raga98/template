@@ -51,7 +51,7 @@ const appRoutes: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: 'content', component: ContentComponent },
   { path: 'noticias', component: NoticiasComponent },
-  { path: 'articulos', component: ArticulosComponent },
+  { path: 'articulos/:id', component: ArticulosComponent },
   { path: 'conferencias', component: ConferenciasComponent },
   { path: 'conferencistas', component: ConferencistasComponent },
   { path: 'conozcanos', component: ConozcanosComponent },

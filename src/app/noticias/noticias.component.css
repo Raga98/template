@@ -21,17 +21,12 @@ p {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 button {
-    font-size: 15px;
     cursor: pointer;
     text-align: center;
     margin: auto;
-    border: none;
+    border: 1px solid grey;
     border-radius: 5px;
-    padding: 10px;
-    background-color: lightblue;
-}
-button:hover {
-    background-color: rgb(199, 228, 238);
+    background-color: #f7dfaa;
 }
 .btn {
     width: 50%;

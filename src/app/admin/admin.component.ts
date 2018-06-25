@@ -24,33 +24,6 @@ export class AdminComponent implements OnInit {
   pubs: Pubs[];
   guardado: boolean;
 
-  openContentDialog(): void {
-    let dialogRef = this.dialog.open(ContenidoDashComponent, {
-      hasBackdrop: false,
-      width: '80%',
-    });
-  }
-
-  openEditDialog(pubId: string, pub: Pubs): void {
-    let dialogRef = this.dialog.open(EditComponent, {
-      id: pubId,
-      hasBackdrop: false,
-      width: '80%',
-    });
-  }
-
- 
-  
-  
-  ArticuloDialogRef: MatDialogRef<ArticuloDashComponent>;
-
-  openArticuloDialog(): void {
-    let dialogRef = this.dialog.open(ArticuloDashComponent, {
-      hasBackdrop: false,
-      width: '80%',
-    });
-  }
-
   botones = 1;
   inicio() {
     this.botones = 1
@@ -65,23 +38,49 @@ export class AdminComponent implements OnInit {
     this.botones = 4
   }
 
+  openContentDialog(): void {
+    let dialogRef = this.dialog.open(ContenidoDashComponent, {
+      hasBackdrop: false,
+      width: '80%',
+    });
+  }
+  openEditDialog(pubId: string, pub: Pubs): void {
+    let dialogRef = this.dialog.open(EditComponent, {
+      id: pubId,
+      hasBackdrop: false,
+      width: '80%',
+    });
+  }
+
+  borrarDesdeComponente(evento) {
+    console.log('Desde admin datos de param '+JSON.stringify(evento));
+  }
+  
+  ArticuloDialogRef: MatDialogRef<ArticuloDashComponent>;
+
+  openArticuloDialog(): void {
+    let dialogRef = this.dialog.open(ArticuloDashComponent, {
+      hasBackdrop: false,
+      width: '80%',
+    });
+  }
+
   constructor( private afAuth: AngularFireAuth, public router: Router, public dialog: MatDialog, private pubsService: PubsService) { }
 
   ngOnInit(){
-    return this.pubsService.getPubs().subscribe(pubs => {
-      this.pubs = pubs;
-    })
+    // return this.pubsService.getPubs().subscribe(pubs => {
+    //   this.pubs = pubs;
+    // })
   }
 
   adminSignOut(){
     this.afAuth.auth.signOut().then( a => {
-      this.router.navigate(['/content']);
+      this.router.navigate(['/inicio']);
     });
   }
-
-  delete(pubs: Pubs){
-   this.pubsService.deletePub(pubs);
-  } 
+  // delete(pubs: Pubs){
+  //  this.pubsService.deletePub(pubs);
+  // } 
 } 
 
 

@@ -13,22 +13,7 @@
     </div>
 </div>
 <div *ngIf = "botones === 1">
-    <!--Contenido general de inicio-->
-    <div *ngFor="let pub of pubs">
-        <h2>
-            {{pub.title}}
-        </h2>
-
-        <div [innerHtml] = "pub.news">
-            {{pub.news}}
-        </div>
-
-        
-        <div>
-            <button style="padding: 3px; background-color: indianred"><i class="material-icons"  (click) = "delete(pub)">delete</i></button>
-            <button style="padding: 3px; background-color: darkseagreen"><i class="material-icons" (click)="openEditDialog()">create</i></button>
-        </div>
-    </div>
+    <content [editable]=true></content>
     <div class="noticias">
         <div class="articulos">
             <!--Contenido de noticias-->

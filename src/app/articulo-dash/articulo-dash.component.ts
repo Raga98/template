@@ -37,8 +37,8 @@ export class ArticuloDashComponent implements OnInit {
   
   }
 
-  deletePub() {
-    this.pubsService.deletePub(this.pubs);
+  // deletePub() {
+  //   this.pubsService.deletePub(this.pubs);
   
-  }
+  // }
 }

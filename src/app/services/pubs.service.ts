@@ -13,6 +13,7 @@ export class PubsService {
   pubsCollection: AngularFirestoreCollection<Pubs>;
   pub$: Observable<Pubs[]>;
   pubsDoc: AngularFirestoreDocument<Pubs>;
+  usuario:any;
 
   constructor(private readonly afs: AngularFirestore) { 
      this.pubsCollection = this.afs.collection('pubs', ref => ref.orderBy('title', 'asc'));
@@ -47,8 +48,8 @@ export class PubsService {
     docRef.update(pubs);
   }
 
-  deletePub(pubs: Pubs){
-    this.pubsDoc = this.afs.doc(`pubs/${pubs.id}`);
+  deletePub(id: string){
+    this.pubsDoc = this.afs.doc(`pubs/${id}`);
     this.pubsDoc.delete();
   }
 
