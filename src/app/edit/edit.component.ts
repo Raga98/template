@@ -11,10 +11,13 @@ import { PubsService } from '../services/pubs.service';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
+  @Input() pubId;
   pub  = {} as Pubs;
   public form: FormGroup;
+  pubs: Pubs[];
+  close: boolean = false;
 
-  constructor( public dialogRef: MatDialogRef<EditComponent>, @Inject(MAT_DIALOG_DATA,) public data: any,
+  constructor( public dialogRef: MatDialogRef<EditComponent>, @Inject(MAT_DIALOG_DATA) public data: any,
    private formsBuilder: FormBuilder, private pubsServie: PubsService) { }
 
   ngOnInit() {
@@ -25,10 +28,10 @@ export class EditComponent implements OnInit {
     });
   }
 
-  editar(id:string, pubs: Pubs) {
+  editContent(pubId, pubs: Pubs) {
     this.form.value;
-    this.pubsServie.editPub(id, pubs);
-    this.dialogRef.close();
+    this.pubsServie.editPub(pubId, pubs);
+    this.dialogRef.close(this.close);
   }
 
 get title() {return this.form.get('title');}

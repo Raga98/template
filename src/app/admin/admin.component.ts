@@ -44,17 +44,17 @@ export class AdminComponent implements OnInit {
       width: '80%',
     });
   }
-  openEditDialog(pubId: string, pub: Pubs): void {
+
+  openEditDialog(): void {
     let dialogRef = this.dialog.open(EditComponent, {
-      id: pubId,
       hasBackdrop: false,
       width: '80%',
     });
   }
 
-  borrarDesdeComponente(evento) {
-    console.log('Desde admin datos de param '+JSON.stringify(evento));
-  }
+  // borrarDesdeComponente(evento) {
+  //   console.log('Desde admin datos de param '+JSON.stringify(evento));
+  // }
   
   ArticuloDialogRef: MatDialogRef<ArticuloDashComponent>;
 
