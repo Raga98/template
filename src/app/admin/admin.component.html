@@ -13,22 +13,21 @@
     </div>
 </div>
 <div *ngIf = "botones === 1">
-    <!--Contenido general de inicio-->
-    <div *ngFor="let pub of pubs">
-        <h2>
-            {{pub.title}}
-        </h2>
-
-        <div [innerHtml] = "pub.news">
-            {{pub.news}}
-        </div>
-
+<!--Contenido general de inicio-->
+    <div *ngFor = "let pub of pubs">
+            <h2>
+                    {{pub.title}}
+                </h2>
         
-        <div>
-            <button style="padding: 3px; background-color: indianred"><i class="material-icons"  (click) = "delete(pub)">delete</i></button>
-            <button style="padding: 3px; background-color: darkseagreen"><i class="material-icons" (click)="openEditDialog()">create</i></button>
-        </div>
+                <div [innerHtml] = "pub.news">
+                    {{pub.news}}
+                </div>
+                <app-edit pubId = "{{pub.id}}"> </app-edit>
+    <div>
+        <button style="padding: 3px; background-color: indianred"><i class="material-icons"  (click) = "delete(pub)">delete</i></button>
+        <button style="padding: 3px; background-color: darkseagreen"><i class="material-icons" (click)="openEditDialog()">create</i></button>
     </div>
+</div>
     <div class="noticias">
         <div class="articulos">
             <!--Contenido de noticias-->
@@ -61,9 +60,9 @@
     <div class="dropdown-content">
         <a (click)="openContentDialog()">contenido</a>
         <a (click)="openArticuloDialog()">articulos</a>
+        <!--  
         <a (click)="boton3()">conferencias</a>
-        <a (click)="boton4()">conferencistas</a>
-        <!--    
+        <a (click)="boton4()">conferencistas</a>  
         <a (click)="boton5()">videos</a>
         <a (click)="boton6()">libros</a>
         <a (click)="boton7()">biografias</a> 

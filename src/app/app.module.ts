@@ -118,7 +118,8 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MaterialModule,
     EditorModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [LoginService, PubsService, AuthGuardService, AdminService],
   bootstrap: [AppComponent],

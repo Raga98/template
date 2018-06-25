@@ -13,6 +13,7 @@ export class ContenidoDashComponent implements OnInit {
   
   pubs  = {} as Pubs;
   public form: FormGroup;
+  close: boolean = false;
 
   constructor( public dialogRef: MatDialogRef<ContenidoDashComponent>, @Inject(MAT_DIALOG_DATA,) public data: any,
    private formsBuilder: FormBuilder, private pubsServie: PubsService) { }
@@ -28,7 +29,7 @@ export class ContenidoDashComponent implements OnInit {
   guardar(pubs: Pubs) {
     this.form.value;
     this.pubsServie.addPub(this.pubs);
-    this.dialogRef.close();
+    this.dialogRef.close(this.close);
   }
 
 get title() {return this.form.get('title');}

@@ -31,16 +31,12 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  openEditDialog(pubId: string, pub: Pubs): void {
+  openEditDialog(): void {
     let dialogRef = this.dialog.open(EditComponent, {
-      id: pubId,
       hasBackdrop: false,
       width: '80%',
     });
   }
-
- 
-  
   
   ArticuloDialogRef: MatDialogRef<ArticuloDashComponent>;
 
@@ -77,11 +73,8 @@ export class AdminComponent implements OnInit {
     this.afAuth.auth.signOut().then( a => {
       this.router.navigate(['/content']);
     });
-  }
-
-  delete(pubs: Pubs){
-   this.pubsService.deletePub(pubs);
-  } 
+  }  
+ 
 } 
 
 
