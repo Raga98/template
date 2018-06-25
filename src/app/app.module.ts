@@ -102,6 +102,7 @@ const appRoutes: Routes = [
     InicioComponent,
     LibroComponent,
     EditComponent,
+
   ],
   imports: [
     RouterModule.forRoot(
@@ -121,7 +122,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     MatDialogModule
   ],
-  providers: [LoginService, PubsService, AuthGuardService, AdminService],
+  providers: [LoginService, PubsService, AuthGuardService, AdminService, MatDialogModule],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
