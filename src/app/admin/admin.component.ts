@@ -55,7 +55,7 @@ export class AdminComponent implements OnInit {
   // borrarDesdeComponente(evento) {
   //   console.log('Desde admin datos de param '+JSON.stringify(evento));
   // }
-  
+
   ArticuloDialogRef: MatDialogRef<ArticuloDashComponent>;
 
   openArticuloDialog(): void {
@@ -78,6 +78,7 @@ export class AdminComponent implements OnInit {
       this.router.navigate(['/inicio']);
     });
   }
+  
   // delete(pubs: Pubs){
   //  this.pubsService.deletePub(pubs);
   // } 
