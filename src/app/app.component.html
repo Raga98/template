@@ -3,37 +3,44 @@
     <div [ngClass]="{'sideMenu-desplegation': show, 'hide': noShow}">
         <div class="dropdown">
             <button class="menubtn" routerLink="/inicio">Inicio</button>
+            <!-- 
             <div class="dropdown-content">
                 <a href="#">Content</a>
                 <a href="#">Noticias</a>
                 <a href="#">Conferencias</a>
                 <a href="#">Conferencistas</a>
-            </div>
+            </div> -->
         </div>
         <div class="dropdown">
             <button class="menubtn" routerLink="/conozcanos">Conozcanos</button>
+            <!-- 
             <div class="dropdown-content">
                 <a href="#">Quienes somos</a>
                 <a href="#">Doctrina</a>
                 <a href="#">Historia</a>
-            </div>
+            </div> -->
         </div>
         <div class="dropdown">
             <button class="menubtn" routerLink="/cursos">Cursos</button>
+            <!-- 
             <div class="dropdown-content">
                 <a href="#">Actividades</a>
                 <a href="#">Opiniones</a>
-            </div>
+            </div> -->
         </div>
         <div class="dropdown">
             <button class="menubtn" routerLink="/biblioteca">Biblioteca</button>
+            <!--
             <div class="dropdown-content">
                 <a href="#">Charlas</a>
                 <a href="#">Libros</a>
                 <a href="#">Bibliografias</a>
             </div>
+            -->
         </div>
-        <div class="publicity"></div>
+        <div class="publicity">
+            <img src="../assets/banner.jpg" width="187" height="400" border="0" usemap="#Map2">
+        </div>
     </div>
     <!-- Vista del menu normal -->
     <div [ngClass]="{'menu2': show, '': noShow}" class="menu">

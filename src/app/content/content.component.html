@@ -3,8 +3,13 @@
     <h2>{{pub.title}}</h2>
     <div [innerHtml]="pub.news">{{pub.news}}</div>
     <div *ngIf='editable'>
+<<<<<<< HEAD
         <button style="padding: 3px; background-color: darkseagreen; float: right;"><i class="material-icons" (click)="openEditDialog($event, pub)">create</i></button>
         <button style="padding: 3px; background-color: indianred; float: right;"><i class="material-icons"  (click) = "delete(pub.id)">delete</i></button>
+=======
+        <button style="padding: 3px; background-color: darkseagreen"><i class="material-icons" (click)="openEditDialog()">create</i></button>
+        <button style="padding: 3px; background-color: indianred"><i class="material-icons"  (click) = "delete(pub.id)">delete</i></button>
+>>>>>>> 8b783b43c281a5caf5aa9f1b90a6933d1e23f84a
     </div>
 
     <div *ngIf = "editState && itemToEdit.id == pub.id">
