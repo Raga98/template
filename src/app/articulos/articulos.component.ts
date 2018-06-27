@@ -11,7 +11,7 @@ export class ArticulosComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.params.subscribe(perro => console.log('El valor del id es: '+perro['id'])) ;
+    // this.route.params.subscribe(perro => console.log('El valor del id es: '+perro['id'])) ;
   }
 
 }
