@@ -45,12 +45,12 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  openEditDialog(): void {
+  /*openEditDialog(): void {
     let dialogRef = this.dialog.open(EditComponent, {
       hasBackdrop: false,
       width: '80%',
     });
-  }
+  } */
 
   // borrarDesdeComponente(evento) {
   //   console.log('Desde admin datos de param '+JSON.stringify(evento));

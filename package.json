@@ -28,6 +28,7 @@
     "core-js": "^2.4.1",
     "firebase": "^4.8.0",
     "generator-node-modules": "^4.5.0",
+    "ng2-opd-popup": "^1.1.21",
     "promise-polyfill": "^8.0.0",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
