@@ -13,6 +13,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from "angularfire2/auth";
 import { initializeApp, database } from 'firebase';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PopupModule } from 'ng2-opd-popup';
 
 import { ConozcanosComponent } from './conozcanos/conozcanos.component';
 import { CursosComponent } from './cursos/cursos.component';
@@ -120,7 +121,8 @@ const appRoutes: Routes = [
     MaterialModule,
     EditorModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    PopupModule.forRoot()
   ],
   providers: [LoginService, PubsService, AuthGuardService, AdminService, MatDialogModule],
   bootstrap: [AppComponent],

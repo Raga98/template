@@ -28,12 +28,6 @@ export class EditComponent implements OnInit {
     });
   }
 
-  editContent(pubId, pubs: Pubs) {
-    this.form.value;
-    this.pubsServie.editPub(pubId, pubs);
-    this.dialogRef.close(this.close);
-  }
-
 get title() {return this.form.get('title');}
 get news() {return this.form.get('news');}
 
