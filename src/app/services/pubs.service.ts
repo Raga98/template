@@ -25,10 +25,9 @@ export class PubsService {
      });
    }
 
-   getPubs(){
-     return this.pub$;
-    }
-  
+  getPubs(){
+    return this.pub$;
+  }
   
   addPub(pubs: Pubs){
     this.pubsCollection.add(pubs).then( docRef => {
@@ -38,8 +37,16 @@ export class PubsService {
         date: new Date
       })
     });
-    
-    
+  }
+
+  addArticle(pubs: Pubs){
+    this.pubsCollection.add(pubs).then( docRef => {
+      let docId = this.afs.doc(`pubs/${docRef.id}`);
+      docId.update({
+        id: docRef.id,
+        date: new Date
+      })
+    });
   }
 
   editPub(pubs: Pubs){

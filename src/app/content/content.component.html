@@ -2,10 +2,10 @@
 <ul *ngFor="let pub of pubs">
     <h2>{{pub.title}}</h2>
     <div [innerHtml]="pub.news">{{pub.news}}</div>
-    <div *ngIf='editable'>
+  
         <button style="padding: 3px; background-color: darkseagreen"><i class="material-icons" (click)="openEditDialog()">create</i></button>
         <button style="padding: 3px; background-color: indianred"><i class="material-icons"  (click) = "delete(pub.id)">delete</i></button>
-    </div>
+   
     <div *ngIf = "editState && itemToEdit.id == pub.id">
         <form [formGroup]="form" novalidate>
             <h1 mat-dialog-title>Agregue Contenido</h1>

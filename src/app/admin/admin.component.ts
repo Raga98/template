@@ -24,19 +24,19 @@ export class AdminComponent implements OnInit {
   pubs: Pubs[];
   guardado: boolean;
 
-  botones = 1;
-  inicio() {
-    this.botones = 1
-  }
-  conozcanos() {
-    this.botones = 2
-  }
-  cursos() {
-    this.botones = 3
-  }
-  biblioteca() {
-    this.botones = 4
-  }
+  // botones = 1;
+  // inicio() {
+  //   this.botones = 1
+  // }
+  // conozcanos() {
+  //   this.botones = 2
+  // }
+  // cursos() {
+  //   this.botones = 3
+  // }
+  // biblioteca() {
+  //   this.botones = 4
+  // }
 
   openContentDialog(): void {
     let dialogRef = this.dialog.open(ContenidoDashComponent, {
@@ -56,14 +56,16 @@ export class AdminComponent implements OnInit {
   //   console.log('Desde admin datos de param '+JSON.stringify(evento));
   // }
 
-  ArticuloDialogRef: MatDialogRef<ArticuloDashComponent>;
+  // ArticuloDialogRef: MatDialogRef<ArticuloDashComponent>;
 
-  openArticuloDialog(): void {
-    let dialogRef = this.dialog.open(ArticuloDashComponent, {
-      hasBackdrop: false,
-      width: '80%',
-    });
-  }
+  // openArticuloDialog(): void {
+  //   let dialogRef = this.dialog.open(ArticuloDashComponent, {
+  //     hasBackdrop: false,
+  //     width: '80%',
+  //   });
+  // }
+
+  
 
   constructor( private afAuth: AngularFireAuth, public router: Router, public dialog: MatDialog, private pubsService: PubsService) { }
 

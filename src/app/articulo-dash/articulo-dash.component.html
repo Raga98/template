@@ -1,23 +1,12 @@
 <form>
-    <h1 mat-dialog-title>Agregue contenido del articulo</h1>
-    <mat-dialog-content style="display: grid">
-        <button mat-button>añadir imagen del articulo</button>
-        <mat-form-field>
-            <input matInput placeholder="Titulo del articulo">
-        </mat-form-field>
-        <mat-form-field>
-            <textarea matInput placeholder="Breve descripción del articulo"></textarea>
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Autor del articulo">
-        </mat-form-field>
-        <label>Contenido del articulo</label>
-        <editor apiKey="test" [init]="{plugins: 'link'}"></editor>
-    </mat-dialog-content>
-    <mat-dialog-actions>
-        <button mat-button type="submit" (click)="guardar()"><mat-icon>save</mat-icon>Guardar</button>
+    <input  name="title" [(ngModel)]="pub.title">
+    <input  name="author" [(ngModel)]="pub.author">
+    <textarea name="description" [(ngModel)]="pub.description"></textarea>
+    <editor name="news" [(ngModel)]="pub.news" formControlName="news" ></editor>
+    <div>
+        <button mat-button (click)="createArticle(pubs)"><mat-icon>save</mat-icon>Guardar</button>
         <button mat-button type="button" mat-dialog-close>Cancel</button>
-    </mat-dialog-actions>
+    </div>
 </form>
   
 

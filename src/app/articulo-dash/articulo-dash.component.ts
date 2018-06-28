@@ -27,14 +27,12 @@ export class ArticuloDashComponent implements OnInit {
     this.parr = true;
   }
 
-  createPub() {
-    this.pubsService.addPub(this.pubs);
-  
+  createArticle(pubs: Pubs) {
+    this.pubsService.addArticle(pubs);
   }
 
  updatePub() {
     this.pubsService.updatePub(this.pubs);
-  
   }
 
   // deletePub() {
