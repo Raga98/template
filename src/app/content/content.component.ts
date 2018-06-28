@@ -47,7 +47,7 @@ export class ContentComponent implements OnInit {
   }
   
   editContent(id: Pubs) {
-    this.pubsServie.updatePub(id);
+    this.pubsService.editPub(id)
     this.clearState();
     //this.dialogRef.close();
   }
