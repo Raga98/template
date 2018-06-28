@@ -13,7 +13,7 @@
 }
 .content {
     color: black;
-    padding: 20px 40px;
+    padding: 30px;
     background-color: tan;
     /* background-image: url("/assets/roses.jpg"); */
     margin: 20px;
@@ -21,7 +21,7 @@
 }
 .footer {
     background-color: #212121;
-    color: tan;
+    color: #f7dfaa;;
     /*rgba(51, 138, 158) */
     margin-bottom: 0px;
     display: grid;

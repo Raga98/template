@@ -5,7 +5,6 @@ import { take, map } from 'rxjs/operators';
 import { Pubs } from '../models/pubs';
 import { QuerySnapshot, DocumentSnapshot } from '@firebase/firestore-types';
 
-
 @Injectable()
 
 export class PubsService {

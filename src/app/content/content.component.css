@@ -19,3 +19,7 @@ button {
     background-color: seashell;
     border: 1px solid black;
 }
+ul {
+    margin: 0;
+    padding: 0
+}

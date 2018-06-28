@@ -1,20 +1,17 @@
 <div class="container">
   <h2>Noticias</h2>
-  <div class="noticias">
-    <div class="articulos">
-      <img src="../assets/imagen9.png" border="1" alt="ejemplo de un texto alternativo" width="100%" height="200">
+  <ul class="noticias">
+    <li class="articulos" *ngFor="let articulo of articulos" (click)="onSelect(articulo)">
+      <img src="../assets/{{articulo.imageUrl}}" border="1" alt="ejemplo de un texto alternativo" width="100%" height="200">
       <h3>
-        Gira latinoamericana
+        {{ articulo.descripcion }}
       </h3>
-      <h4>
-        Pequeña descripción del artículo para llamar la atención del usuario
-      </h4>
       <p>
-        15 Junio, 2018 | Jon Aizpúrua y Dante López
+        {{ articulo.fecha }} | {{ articulo.autor }}
       </p>
       <button mat-button routerLink="/articulos">Seguir leyendo</button>
-    </div>
-    <div class="articulos">
+    </li>
+    <!-- <div class="articulos">
       <img src="../assets/imagen5.jpg" border="1" alt="ejemplo de un texto alternativo" width="100%" height="200">
       <h3>
         Descubrimientos en el area lingüistica
@@ -78,7 +75,9 @@
         15 Junio, 2018 | Jon Aizpúrua y Dante López
       </p>
       <button mat-button>Seguir leyendo</button>
-    </div>
-  </div>
-  <button class="btn">más noticias</button>
+    </div> -->
+  </ul>
+  <div class="mas">
+    <button mat-button class="btn">más noticias</button>
+  </div>  
 </div>

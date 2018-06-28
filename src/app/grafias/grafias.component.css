@@ -1,0 +1,23 @@
+.display {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: 10px;
+}
+img {
+    height: 235px;
+    margin: auto;
+    border: 2px solid gray;
+}
+.contenedor {
+    display: block;
+}
+button {
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid black;
+}

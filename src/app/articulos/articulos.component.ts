@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute }   from '@angular/router';
+import { ActivatedRoute, Router }   from '@angular/router';
+import { Articulo } from '../models/articulos';
+import { ARTICULOS } from '../services/articulos-mock';
 
 @Component({
   selector: 'app-articulos',
@@ -8,10 +10,15 @@ import { ActivatedRoute }   from '@angular/router';
 })
 export class ArticulosComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+  articulos = ARTICULOS;
+  selectedArticulo: Articulo;
+
+  constructor(private route: ActivatedRoute, private router: Router) { 
+    this.route.params.subscribe( params => console.log(params));
+  }
 
   ngOnInit() {
-    // this.route.params.subscribe(perro => console.log('El valor del id es: '+perro['id'])) ;
+    // this.route.params.subscribe(perro => console.log('El valor del id es: '+perro['id']));
   }
 
 }
