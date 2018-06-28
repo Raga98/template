@@ -31,9 +31,9 @@ export class ArticuloDashComponent implements OnInit {
     this.pubsService.addArticle(pubs);
   }
 
- updatePub() {
-    this.pubsService.updatePub(this.pubs);
-  }
+ /*updatePub() {
+    this.pubsService.eeditPub(this.pubs);
+ }*/
 
   // deletePub() {
   //   this.pubsService.deletePub(this.pubs);

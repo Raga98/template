@@ -50,18 +50,13 @@ export class PubsService {
   }
 
   editPub(pubs: Pubs){
-   this.pubsDoc = this.afs.doc(`pubs/${pubs.id}`);
-   this.pubsDoc.update(pubs);
+   let docRef = this.afs.doc(`pubs/${pubs.id}`);
+   docRef.update(pubs);
   }
 
   deletePub(id: string){
     this.pubsDoc = this.afs.doc(`pubs/${id}`);
     this.pubsDoc.delete();
-  }
-
-  updatePub(id: Pubs){
-    this.pubsDoc = this.afs.doc(`pubs/${id.id}`);
-    this.pubsDoc.update(id);
   }
 
 }
