@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Conferencia } from '../models/conferencia';
+import { CONFERENCIAS } from '../services/conferencias-mock';
 
 @Component({
   selector: 'conferencias',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./conferencias.component.css']
 })
 export class ConferenciasComponent implements OnInit {
+
+  conferencias = CONFERENCIAS;
+  selectedConferencia: Conferencia;
 
   constructor() { }
 
