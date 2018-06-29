@@ -10,7 +10,7 @@ export const environment = {
     authDomain: 'espiritacima.firebaseapp.com',
     databaseURL: 'https://espiritacima.firebaseio.com',
     projectId: 'espiritacima',
-    storageBucket: '',
+    storageBucket: 'espiritacima.appspot.com',
     messagingSenderId: '111160775127'
   }
 };

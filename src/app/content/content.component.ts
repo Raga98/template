@@ -4,6 +4,7 @@ import { Pubs } from '../models/pubs';
 import { EditComponent } from '../edit/edit.component';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FilesService } from '../services/files.service';
 
 @Component({
   selector: 'content',
@@ -28,7 +29,7 @@ export class ContentComponent implements OnInit {
   editState: boolean = false;
   itemToEdit: Pubs;
 
-  constructor(private pubsService:PubsService, public dialog: MatDialog, private formsBuilder: FormBuilder) { }
+  constructor(private pubsService:PubsService, public dialog: MatDialog, private formsBuilder: FormBuilder, private fileService : FilesService) { }
 
   ngOnInit() {
     this.pubsService.getPubs().subscribe(pubs => {
@@ -39,6 +40,7 @@ export class ContentComponent implements OnInit {
         title: ['', Validators.required],
         news: ['', Validators.required]
       });
+  
   }
 
   openEditDialog(event, pub)  {
@@ -57,9 +59,15 @@ export class ContentComponent implements OnInit {
    this.itemToEdit = null;
  }
 
-  delete(item: string) {
+ upload(event, title: Pubs){
+   this.fileService.uploadFile(event, title);
+
+ }
+
+  delete(item: Pubs) {
     console.log('En el componente');
     this.pubsService.deletePub(item);
+    this.fileService.deleteFile(item);
     // this.borrar.emit({codigo:1, valor:'prueba', pub:param});
   }
 

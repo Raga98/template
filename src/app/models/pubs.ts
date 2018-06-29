@@ -4,6 +4,6 @@ export interface Pubs {
     title: string;
     description: string;
     news: string;
-    date: Date;
+    img : any;
 }
 

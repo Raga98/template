@@ -54,8 +54,8 @@ export class PubsService {
    docRef.update(pubs);
   }
 
-  deletePub(id: string){
-    this.pubsDoc = this.afs.doc(`pubs/${id}`);
+  deletePub(id: Pubs){
+    this.pubsDoc = this.afs.doc(`pubs/${id.id}`);
     this.pubsDoc.delete();
   }
 

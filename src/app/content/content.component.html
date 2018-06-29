@@ -1,14 +1,17 @@
 <!--Contenido general de inicio-->
 <ul *ngFor="let pub of pubs">
     <h2>{{pub.title}}</h2>
+    <img src = 'https://firebasestorage.googleapis.com/v0/b/espiritacima.appspot.com/o/files%2FkhjkhjkotXCEIjstBWlFFAyVFVa?alt=media&token=b7130265-2998-414e-a82a-638d7c35cab2'>
     <div [innerHtml]="pub.news">{{pub.news}}</div>
     <div *ngIf = "editable">
         <button style="padding: 3px; background-color: darkseagreen"><i class="material-icons" (click)="openEditDialog($event, pub)">create</i></button>
-        <button style="padding: 3px; background-color: indianred"><i class="material-icons" (click) = "delete(pub.id)">delete</i></button>
+        <button style="padding: 3px; background-color: indianred"><i class="material-icons" (click) = "delete(pub)">delete</i></button>
     </div>
     <div *ngIf = "editState && itemToEdit.id == pub.id">
         <form [formGroup]="form" novalidate>
             <h1>Editar Contenido</h1>
+                <input type = 'file' (change) = "upload($event, pub)">
+                <div>{{uploadPercent | async}}</div>
                 <input  placeholder="Titulo del contenido" [(ngModel)]="pub.title" formControlName="title" name="title" >
                 <editor [(ngModel)]="pub.news" formControlName="news" name="news" ></editor>
                 <button (click)="editContent(pub)">Editar</button>

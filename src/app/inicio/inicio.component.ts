@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { PubsService } from '../services/pubs.service'; 
 import { Pubs } from '../models/pubs';
 
@@ -9,14 +9,25 @@ import { Pubs } from '../models/pubs';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
-
-  
   pubs:Pubs[];
   pub =  {} as Pubs;
 
-  ngOnInit() {
+  constructor(private pubsService: PubsService) { }
 
-  }
+  
+
+  ngOnInit() {
+    this.pubsService.getPubs().subscribe(pubs => {
+      this.pubs = pubs;
+
+  });
+
+ }
+ 
+ ngOnChanges(){
+  this.pubsService.getPubs().subscribe(pubs => {
+    this.pubs = pubs;
+  });
+ }
 
 }

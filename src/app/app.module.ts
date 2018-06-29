@@ -11,6 +11,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from "angularfire2/auth";
+import { AngularFireStorageModule } from 'angularfire2/storage';
 import { initializeApp, database } from 'firebase';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -23,6 +24,7 @@ import { LoginService } from './services/login.service';
 import { PubsService } from './services/pubs.service';
 import { AuthGuardService } from './services/auth-guard.service';
 import { AdminService } from './services/admin.service';
+import { FilesService } from './services/files.service';
 
 // Componentes
 import { ConozcanosComponent } from './conozcanos/conozcanos.component';
@@ -98,9 +100,10 @@ import { EditorModule } from '@tinymce/tinymce-angular';//Editor WYSIWYG
     EditorModule,
     ReactiveFormsModule,
     MatDialogModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireStorageModule
   ],
-  providers: [LoginService, PubsService, AuthGuardService, AdminService, MatDialogModule],
+  providers: [LoginService, PubsService, AuthGuardService, AdminService, MatDialogModule, FilesService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
