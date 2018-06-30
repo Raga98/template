@@ -1,7 +1,7 @@
 <!--Contenido general de inicio-->
 <ul *ngFor="let pub of pubs">
     <h2>{{pub.title}}</h2>
-    <img src = '{{pub.img}}'>
+    <img width = "900"  height="700" src = '{{pub.img}}'>
     <div [innerHtml]="pub.news">{{pub.news}}</div>
     <div *ngIf = "editable">
         <button style="padding: 3px; background-color: darkseagreen"><i class="material-icons" (click)="openEditDialog($event, pub)">create</i></button>
