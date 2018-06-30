@@ -10,7 +10,7 @@ export class FilesService {
 
   pubs = {} as Pubs;
   uploadPercent: Observable<number>;
-  url: Observable<string | null>;
+
   constructor(private storage: AngularFireStorage, private afs: AngularFirestore) { }
 
   uploadFile(event, pub : Pubs ){
@@ -18,16 +18,18 @@ export class FilesService {
   const filePath = `files/${pub.title + pub.id}`;
   const fileRef = this.storage.ref(filePath);
   const task = this.storage.upload(filePath, file);
-  const imgName = pub.title + pub.id;
-  this.url = fileRef.getDownloadURL();
-
   
+  let urlimg = task.downloadURL().subscribe(url => {
+    console.log(url);
+    let docRef = this.afs.doc(`pubs/${pub.id}`);
+     docRef.update({
+       img: url
+     });
+  })
+
   this.uploadPercent = task.percentageChanges();
    
-  let docRef = this.afs.doc(`pubs/${pub.id}`);
-     docRef.update({
-       img: this.url 
-     });
+  
   }
 
   deleteFile(pub: Pubs) {
