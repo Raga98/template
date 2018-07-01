@@ -5,6 +5,7 @@ import { EditComponent } from '../edit/edit.component';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { FilesService } from '../services/files.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'content',
@@ -28,6 +29,7 @@ export class ContentComponent implements OnInit {
   dialogRef: any;
   editState: boolean = false;
   itemToEdit: Pubs;
+  urlImg: Observable<string>;
 
   constructor(private pubsService:PubsService, public dialog: MatDialog, private formsBuilder: FormBuilder, private fileService : FilesService) { }
 
@@ -63,6 +65,7 @@ export class ContentComponent implements OnInit {
    this.fileService.uploadFile(event, title);
 
  }
+
 
   delete(item: Pubs) {
     console.log('En el componente');
