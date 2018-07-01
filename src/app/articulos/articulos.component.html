@@ -1,14 +1,14 @@
 <article *ngFor="let articulo of articulos" >
+  <h2>{{ articulo.titulo }}</h2>
   <div class="imagen">
     <img src="../assets/despertar.jpg" width="100%">
   </div>
   <div class="articulo">
-    <h2>{{ articulo.titulo }}</h2>
     <p>
-      {{ articulo.contenido }}
+      {{ articulo.description }}
     </p>
     <p>
-
+      {{ articulo.contenido }}
     </p>
   </div>
 </article>

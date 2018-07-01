@@ -1,11 +1,16 @@
 <h2>Conferencistas</h2>
 <div class="contenido">
   <div class="conferencistas">
-    <img src="../assets/conferencistas/jaizpurua.jpg" border="1" alt="ejemplo de un texto alternativo">
-    <h4>Jon Aizpúrua</h4>
-    <p>email: conferencista@email.com</p>
-    <p>Breve descripción de quien es y en que se destaca</p>
+    <ul>
+      <li *ngFor="let conferencista of conferencistas">
+        <img src="../assets/conferencistas/jaizpurua.jpg" border="1" alt="ejemplo de un texto alternativo">
+        <a [routerLink]="['/conferencista/', conferencista.id]"><h4>{{ conferencista.name }}</h4></a>
+        <p>email: {{ conferencista.email }}</p>
+        <p>Breve descripción de quien es y en que se destaca</p>
+      </li>
+    </ul>
   </div>
+<!--   
   <div class="conferencistas">
     <img src="../assets/conferencistas/vdasilva.jpg" border="1" alt="ejemplo de un texto alternativo">
     <h4>Victor Da Silva</h4>
@@ -29,5 +34,5 @@
     <h4>Antulio Malavé</h4>
     <p>email: conferencista@email.com</p>
     <p>Breve descripción de quien es y en que se destaca</p>
-  </div>
+  </div> -->
 </div>

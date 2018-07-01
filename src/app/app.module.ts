@@ -32,7 +32,8 @@ import { CursosComponent } from './cursos/cursos.component';
 import { BibliotecaComponent } from './biblioteca/biblioteca.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { ArticulosComponent } from './articulos/articulos.component';
-import { ConferencistasComponent } from './conferencistas/conferencistas.component';
+import { ConferencistasComponent } from './conferencistas/conferencista/conferencistas.component';
+import { ConferencistaDetalleComponent } from './conferencistas/conferencista-detalle/conferencista-detalle.component';
 import { ConferenciasComponent } from './conferencias/conferencias.component';
 import { VideosComponent } from './videos/videos.component';
 import { LibrosComponent } from './libros/libros.component';
@@ -82,6 +83,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';//Editor WYSIWYG
     InicioComponent,
     LibroComponent,
     EditComponent,
+    ConferencistaDetalleComponent
   ],
   imports: [
     // RouterModule.forRoot(

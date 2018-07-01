@@ -15,7 +15,7 @@ export class NoticiasComponent implements OnInit {
 
 
   constructor(private route: ActivatedRoute, private router: Router) { 
-    this.route.params.subscribe( params => console.log(params));
+    // this.route.params.subscribe( params => console.log(params));
   }
 
   activar(title: string) {

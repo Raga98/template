@@ -9,7 +9,8 @@
       <p>
         {{ articulo.fecha }} | {{ articulo.autor }}
       </p>
-      <button mat-button routerLink="/articulos">Seguir leyendo</button>
+      <button *ngFor="let articulo of articulos of heroes" class="col-1-4"
+      routerLink="/articulos/{{articulo.title}}">Seguir leyendo</button>
     </li>
     <!-- <div class="articulos">
       <img src="../assets/imagen5.jpg" border="1" alt="ejemplo de un texto alternativo" width="100%" height="200">

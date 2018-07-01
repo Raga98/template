@@ -8,7 +8,7 @@ import { ContentComponent } from './content/content.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { ConferenciasComponent } from './conferencias/conferencias.component';
-import { ConferencistasComponent } from './conferencistas/conferencistas.component';
+import { ConferencistasComponent } from './conferencistas/conferencista/conferencistas.component';
 
 import { ConozcanosComponent } from './conozcanos/conozcanos.component';
 
@@ -32,20 +32,23 @@ import { LibrosDashComponent } from './libros-dash/libros-dash.component';
 import { BiografiasDashComponent } from './biografias-dash/biografias-dash.component';
 
 import { EditComponent } from './edit/edit.component';
+import { ConferencistaDetalleComponent } from "./conferencistas/conferencista-detalle/conferencista-detalle.component";
 
   const routes: Routes = [
     { path: 'inicio', component: InicioComponent },
-    { path: 'content', component: ContentComponent },
-    { path: 'noticias', component: NoticiasComponent },
-    { path: 'articulos/algo', component: ArticulosComponent },
-    { path: 'conferencias', component: ConferenciasComponent },
-    { path: 'conferencistas', component: ConferencistasComponent },
+    // { path: 'content', component: ContentComponent },
+    // { path: 'noticias', component: NoticiasComponent },
+    { path: 'articulos/:title', component: ArticulosComponent },
+    // { path: 'conferencias', component: ConferenciasComponent },
+    // { path: 'conferencistas', component: ConferencistasComponent },
     { path: 'conozcanos', component: ConozcanosComponent },
     { path: 'cursos', component: CursosComponent },
-    { path: 'libros', component: LibrosComponent },
+    // { path: 'libros', component: LibrosComponent },
     { path: 'libro', component: LibroComponent },
     { path: 'biblioteca', component: BibliotecaComponent },
-    { path: 'biografias', component: BiografiasComponent },
+    // { path: 'conferencista-detalle', component: ConferencistaDetalleComponent },
+    { path: "conferencista/:id", component: ConferencistaDetalleComponent },
+    // { path: 'biografias', component: BiografiasComponent },
     { path: 'grafias', component: GrafiasComponent },
     { path: 'login', component: LoginComponent },
     { path: 'admin', component: AdminComponent },

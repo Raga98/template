@@ -19,6 +19,10 @@ export class ArticulosComponent implements OnInit {
 
   ngOnInit() {
     // this.route.params.subscribe(perro => console.log('El valor del id es: '+perro['id']));
+
   }
 
+
 }
+
+
