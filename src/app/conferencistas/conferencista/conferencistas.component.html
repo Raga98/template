@@ -1,14 +1,12 @@
 <h2>Conferencistas</h2>
 <div class="contenido">
-  <div class="conferencistas">
-    <ul>
-      <li *ngFor="let conferencista of conferencistas">
+  <div *ngFor="let conferencista of conferencistas" class="conferencistas">
+      <div>
         <img src="../assets/conferencistas/jaizpurua.jpg" border="1" alt="ejemplo de un texto alternativo">
         <a [routerLink]="['/conferencista/', conferencista.id]"><h4>{{ conferencista.name }}</h4></a>
         <p>email: {{ conferencista.email }}</p>
         <p>Breve descripción de quien es y en que se destaca</p>
-      </li>
-    </ul>
+      </div>
   </div>
 <!--   
   <div class="conferencistas">

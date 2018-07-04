@@ -1,7 +1,7 @@
 <!--Contenido general de inicio-->
-<ul *ngFor="let pub of pubs">
+<!-- <div *ngFor="let pub of pubs">
     <h2>{{pub.title}}</h2>
-    <img width = "900"  height="700" src = '{{pub.img}}'>
+    <img width="900"  height="700" src='{{pub.img}}'>
     <div [innerHtml]="pub.news">{{pub.news}}</div>
     <div *ngIf = "editable">
         <button style="padding: 3px; background-color: darkseagreen"><i class="material-icons" (click)="openEditDialog($event, pub)">create</i></button>
@@ -10,12 +10,44 @@
     <div *ngIf = "editState && itemToEdit.id == pub.id">
         <form [formGroup]="form" novalidate>
             <h1>Editar Contenido</h1>
-                <input type = 'file' (change) = "upload($event, pub)">
-                <div>{{uploadPercent | async}}</div>
-                <input  placeholder="Titulo del contenido" [(ngModel)]="pub.title" formControlName="title" name="title" >
-                <editor [(ngModel)]="pub.news" formControlName="news" name="news" ></editor>
-                <button (click)="editContent(pub)">Editar</button>
-                <button type="button">Cancel</button>
+            <input type='file' (change)="upload($event, pub)">
+            <div>{{uploadPercent | async}}</div>
+            <input  placeholder="Titulo del contenido" [(ngModel)]="pub.title" formControlName="title" name="title" >
+            <editor [(ngModel)]="pub.news" formControlName="news" name="news"></editor>
+            <button (click)="editContent(pub)">Editar</button>
+            <button type="button">Cancel</button>
         </form>
     </div>
+</div> -->
+<p>
+    El Movimiento de Cultura Espírita CIMA es una Asociación Civil, sin fines de lucro, con Personalidad Jurídica, dedicada al estudio y divulgación de la Doctrina Espírita. Los estudios y las prácticas del MOVIMIENTO son totalmente laicos, ajenos a cualquier clase de misticismos o ritualismos. Sus principios básicos excluyen cualquier clase de dogmatismos o sectarismos religiosos o políticos.
+</p>
+<h3>
+    Objetivos Principales
+</h3><br>
+<ul>
+    <li>
+        Estudiar ampliamente la Doctrina Espírita en los tres aspectos que la conforman: científico, filosófico y moral a tono con las enseñanzas del filósofo y pedagogo francés Hippolite Léon Denizard Rivail (1804-1869), universalmente conocido como ALLAN KARDEC.
+    </li>
+    <li>
+        Investigar en todas las áreas filosóficas y científicas, cuyas nociones capaciten a sus asociados para una mejor comprensión de las leyes de la naturaleza y eleven su nivel cultural.
+    </li>
+    <li>
+        Experimentar en torno al bio-magnetismo y la fenomenología psíquica, educando y desarrollando todas las formas mediúmnicas bajo normas racionales y científicas de estudio y control, practicándolas con total desinterés.
+    </li>
+    <li>
+        Contribuir a la solución de aquellos casos en que se evidencien obsesiones o alteraciones de la personalidad, de nítido origen espiritual, mediante investigaciones y estudios serios de los mismos, brindando la mayor solidaridad moral y efectivo socorro.
+    </li>
+    <li>
+        Impulsar la superación moral y el cultivo de los valores espirituales de sus asociados, hacia una vivencia profunda y permanente, a nivel personal, familiar y social, de los elevados principios de la Doctrina Espírita.
+    </li>
+    <li>
+        Promover la libertad de conciencia y la libre expresión del pensamiento; censurar toda restricción a los Derechos Humanos y defender el Espiritismo de los ataques injustificados de que sea públicamente objeto.
+    </li>
+    <li>
+        Defender los ideales pacifistas y humanistas, la libertad de conciencia y la libre manifestación del pensamiento, censurando toda restricción a los derechos humanos.
+    </li>
+    <li>
+        Mantener relaciones amistosas y de cooperación con todas las organizaciones espíritas del mundo y, en especial, con aquellas que se agrupan en la Confederación Espírita Panamericana (C.E.P.A.) con cuyos ideales se identifica.
+    </li>
 </ul>
