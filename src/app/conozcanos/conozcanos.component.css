@@ -1,0 +1,23 @@
+h4 {
+    font-weight: 600;
+    color: #222280
+}
+.mas {
+    width: 37px;
+    margin: 0 auto;
+    margin-bottom: 15px
+}
+.btn {
+    background-color: antiquewhite;
+}
+button {
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: seashell;
+    border: 1px solid black;
+}
