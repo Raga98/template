@@ -70,9 +70,7 @@ export class AdminComponent implements OnInit {
   constructor( private afAuth: AngularFireAuth, public router: Router, public dialog: MatDialog, private pubsService: PubsService) { }
 
   ngOnInit(){
-    // return this.pubsService.getPubs().subscribe(pubs => {
-    //   this.pubs = pubs;
-    // })
+   this.pubsService.getContenidos();
   }
 
   adminSignOut(){

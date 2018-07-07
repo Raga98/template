@@ -22,21 +22,21 @@ export class ContentComponent implements OnInit {
   @Input() editable:boolean = false;
   public form: FormGroup;
 
-  pubs:Pubs[];
+  pubs: Pubs[];
+  pub$ : Observable<Pubs[]>
   pub =  {} as Pubs;
   EditDialogRef: MatDialogRef<EditComponent>;
-  pubsServie: any;
   dialogRef: any;
   editState: boolean = false;
   itemToEdit: Pubs;
   urlImg: Observable<string>;
-
+ 
   constructor(private pubsService:PubsService, public dialog: MatDialog, private formsBuilder: FormBuilder, private fileService : FilesService) { }
 
   ngOnInit() {
-    this.pubsService.getPubs().subscribe(pubs => {
-      this.pubs = pubs;
-    });
+    //this.pubsService.getContenidos();
+    this.pubsService.getContenidos();
+
       this.form = this.formsBuilder.group({
         //ID: [],
         title: ['', Validators.required],

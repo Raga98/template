@@ -1,6 +1,7 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { PubsService } from '../services/pubs.service'; 
 import { Pubs } from '../models/pubs';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'inicio',
@@ -9,7 +10,7 @@ import { Pubs } from '../models/pubs';
 })
 export class InicioComponent implements OnInit {
 
-  pubs:Pubs[];
+  pubs: Observable<Pubs[]>;
   pub =  {} as Pubs;
 
   constructor(private pubsService: PubsService) { }
@@ -17,17 +18,7 @@ export class InicioComponent implements OnInit {
   
 
   ngOnInit() {
-    this.pubsService.getPubs().subscribe(pubs => {
-      this.pubs = pubs;
-
-  });
-
+   
  }
  
- ngOnChanges(){
-  this.pubsService.getPubs().subscribe(pubs => {
-    this.pubs = pubs;
-  });
- }
-
 }

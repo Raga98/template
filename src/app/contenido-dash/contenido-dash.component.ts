@@ -26,9 +26,9 @@ export class ContenidoDashComponent implements OnInit {
     });
   }
 
-  guardar(pubs: Pubs) {
+  guardar(pubs: Pubs, type: string) {
     this.form.value;
-    this.pubsServie.addPub(this.pubs);
+    this.pubsServie.addPub(this.pubs, type);
     this.dialogRef.close(this.close);
   }
 
