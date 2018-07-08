@@ -3,7 +3,6 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { Observable} from 'rxjs/Observable';
 import { Subject, BehaviorSubject } from 'rxjs';
 import { Pubs } from '../models/pubs';
-import { QuerySnapshot, DocumentSnapshot } from '@firebase/firestore-types';
 import { switchMap } from 'rxjs/operators';
 
 @Injectable()
@@ -15,7 +14,7 @@ export class PubsService {
   pubsDoc: AngularFirestoreDocument<Pubs>;
   usuario:any;
   publics : Pubs[];
-  
+  type$: BehaviorSubject<string| null>;
 
   constructor(private readonly afs: AngularFirestore) { 
      this.pubsCollection = this.afs.collection('pubs', ref => ref.orderBy('title', 'asc'));
@@ -26,26 +25,29 @@ export class PubsService {
         return {id,...data};
        });
      });
-     
+
    }
 
   getPubs(){
    return this.pub$;
   }
 
-  getContenidos(){
-    const type$ = new Subject<string>();
-    this.pub$ = type$.pipe(switchMap( type => 
-      this.afs.collection<Pubs>('pubs', ref => ref.where('type', '==', type)).valueChanges()
+  getContenidos(): Observable<any> {
+      this.type$ = new BehaviorSubject(null);
+      return this.pub$ = this.type$.pipe(switchMap( type => 
+      this.afs.collection<Pubs>('pubs', ref => ref.where('type', '==', "contenido")).valueChanges()
+    ),
+  );  
+  }
+
+  getArticulos(): Observable<any>{
+    this.type$ = new BehaviorSubject(null);
+    return this.pub$ = this.type$.pipe(switchMap( type => 
+    this.afs.collection<Pubs>('pubs', ref => ref.where('type', '==', "articulo")).valueChanges()
     ),
   );
-  this.pub$.subscribe(queried => {
-    console.log(queried);
-  })
-  type$.next('contenido');
-
   }
-  
+
   addPub(pubs: Pubs, type: string){
     this.pubsCollection.add(pubs).then( docRef => {
       let docId = this.afs.doc(`pubs/${docRef.id}`);

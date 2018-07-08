@@ -12,18 +12,14 @@
             <h1>Editar Contenido</h1>
             <input type='file' (change)="upload($event, pub)">
             <div>{{uploadPercent | async}}</div>
-            <input  placeholder="Titulo del contenido" [(ngModel)]="pub.title" formControlName="title" name="title" >
+            <input  placeholder="Titulo del contenido" [(ngModel)]="pub.title" formControlName="title" name="title" > 
             <editor [(ngModel)]="pub.news" formControlName="news" name="news"></editor>
             <button (click)="editContent(pub)">Editar</button>
             <button type="button">Cancel</button>
         </form>
     </div>
-<<<<<<< HEAD
-</div> 
-=======
-</div> -->
+</div>
 <h2>Espirita Cima</h2>
->>>>>>> 5ee515d0ed41a91f553acee0cab04ada9c4a6a65
 <p>
     El Movimiento de Cultura Espírita CIMA es una Asociación Civil, sin fines de lucro, con Personalidad Jurídica, dedicada al estudio y divulgación de la Doctrina Espírita. Los estudios y las prácticas del MOVIMIENTO son totalmente laicos, ajenos a cualquier clase de misticismos o ritualismos. Sus principios básicos excluyen cualquier clase de dogmatismos o sectarismos religiosos o políticos.
 </p>

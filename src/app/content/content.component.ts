@@ -34,10 +34,11 @@ export class ContentComponent implements OnInit {
   constructor(private pubsService:PubsService, public dialog: MatDialog, private formsBuilder: FormBuilder, private fileService : FilesService) { }
 
   ngOnInit() {
-    //this.pubsService.getContenidos();
-    this.pubsService.getContenidos();
-
-      this.form = this.formsBuilder.group({
+     this.pubsService.getContenidos().subscribe(a => {
+       this.pubs = a;
+     })
+    
+    this.form = this.formsBuilder.group({
         //ID: [],
         title: ['', Validators.required],
         news: ['', Validators.required]
